@@ -1,14 +1,19 @@
 {
   "current": {
     "colors_solid_button_labels": "#FFFFFF",
-    "colors_accent_1": "#121212",
-    "colors_accent_2": "#334FB4",
-    "colors_text": "#121212",
+    "colors_accent_1": "#000000",
+    "colors_accent_2": "#004ea2",
+    "colors_text": "#000000",
     "colors_outline_button_labels": "#121212",
     "colors_background_1": "#FFFFFF",
-    "colors_background_2": "#F3F3F3",
-    "type_header_font": "assistant_n4",
-    "type_body_font": "assistant_n4",
+    "colors_background_2": "#fafafa",
+    "type_header_font": "sans-serif",
+    "type_body_font": "sans-serif",
+    "page_width": "1200",
+    "social_instagram_link": "https:\/\/www.instagram.com\/anjosakuraclinic\/",
+    "favicon": "shopify:\/\/shop_images\/favicon.png",
+    "checkout_logo_image": "shopify:\/\/shop_images\/logo.png",
+    "checkout_body_background_color": "#fafafa",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",

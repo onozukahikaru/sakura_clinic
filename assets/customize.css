@@ -1,0 +1,38 @@
+/* basic */
+
+html, 
+body{
+  font-family:'Montserrat', "Helvetica Neue", YuGothic, dnp-shuei-gothic-gin-std, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  overflow-x: hidden;
+  letter-spacing: 1px;
+}
+body.homepage{
+  background: white;
+}
+h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5{
+  font-family: 'Montserrat', "Helvetica Neue", YuGothic, dnp-shuei-gothic-gin-std, sans-serif;
+}
+.icon.icon-close{
+  fill: black;
+}
+a:hover{
+  opacity: 0.7;
+}
+.font_montserrat{
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* footer */
+footer.footer{
+  background: #6D7083;
+}
+footer .smoothscroll-top{
+  text-align: right;
+}
+footer.footer,
+footer .footer-block__heading,
+footer a{
+  color: white;
+}

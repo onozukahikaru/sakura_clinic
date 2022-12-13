@@ -194,7 +194,6 @@
       "type": "column_specialset",
       "settings": {
         "heading": "SPECIAL SET",
-        "heading_size": "h1",
         "subtitle": "<p>咲くらクリニックスペシャルセット<\/p>",
         "description": "<p>咲くらクリニックのオリジナルの<br\/>お得なセット商品を集めました。<\/p>"
       }
@@ -202,13 +201,13 @@
     "a4e22208-d3be-4bf1-b698-0b9ce780e774": {
       "type": "information",
       "settings": {
-        "title": "INFORMATION",
-        "heading_size": "h1",
-        "description": "<p>お知らせ<\/p>",
-        "info_list": "news",
-        "post_limit": 3,
-        "info_list_date": false,
-        "info_list_category": false
+        "heading": "INFORMATION",
+        "text_1": "クーポン配布中",
+        "subtext_1": "<p>当オンラインショップでは定期的にクーポンを配布しています。クーポンは、当ショップの公式LINEにお友達登録をするとゲットできます。<\/p>",
+        "link_1": "",
+        "text_2": "発送業務について",
+        "subtext_2": "<p>クリニック休診日の水曜日、日曜日は発送業務を停止しています。あらかじめご了承ください。<\/p>",
+        "link_2": ""
       }
     }
   },

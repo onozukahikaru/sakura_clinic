@@ -7,21 +7,21 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/main-slide-01.jpg",
-            "link": ""
+            "link": "shopify:\/\/collections\/revision-skincare"
           }
         },
         "template--14862070874154__673cffd3-4707-4310-90d2-3c7091a8413d-167091790777e1be95-1": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/main-slide-02.jpg",
-            "link": ""
+            "link": "shopify:\/\/collections\/ゼオスキンヘルス"
           }
         },
         "6c6010d8-6491-4e2f-8069-5a46de2b4a2d": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/main-slide-03.jpg",
-            "link": ""
+            "link": "shopify:\/\/collections\/エムディア"
           }
         }
       },

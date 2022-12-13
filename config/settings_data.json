@@ -38,8 +38,8 @@
           "footer-0": {
             "type": "link_list",
             "settings": {
-              "heading": "Quick links",
-              "menu": "footer"
+              "heading": "送料無料（一部商品を除く）",
+              "menu": "link-list"
             }
           },
           "footer-1": {

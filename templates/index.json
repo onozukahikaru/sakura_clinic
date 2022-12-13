@@ -189,12 +189,22 @@
         "image_padding": false,
         "show_view_all": false
       }
+    },
+    "5c52ae51-ea07-433b-a2a7-e078e3627821": {
+      "type": "column_specialset",
+      "settings": {
+        "heading": "SPECIAL SET",
+        "heading_size": "h1",
+        "subtitle": "<p>咲くらクリニックスペシャルセット<\/p>",
+        "description": "<p>咲くらクリニックのオリジナルの<br\/>お得なセット商品を集めました。<\/p>"
+      }
     }
   },
   "order": [
     "9213119a-863c-47fd-91a6-eb9479167a91",
     "featured_products",
     "3039fa5f-ec94-4485-aa0c-6b0714b980d1",
-    "c7627538-6c12-4f4b-a72a-df4d9289e159"
+    "c7627538-6c12-4f4b-a72a-df4d9289e159",
+    "5c52ae51-ea07-433b-a2a7-e078e3627821"
   ]
 }

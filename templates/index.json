@@ -111,26 +111,75 @@
         "template--14862070874154__c7627538-6c12-4f4b-a72a-df4d9289e159-167090213079a5d56b-0": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "ゼオスキンヘルス"
           }
         },
         "template--14862070874154__c7627538-6c12-4f4b-a72a-df4d9289e159-167090213079a5d56b-1": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "revision-skincare"
           }
         },
         "template--14862070874154__c7627538-6c12-4f4b-a72a-df4d9289e159-167090213079a5d56b-2": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "エムディア"
+          }
+        },
+        "2aaa83f2-0c8b-47c7-8ef3-4caa2dcaafff": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "ビューティフルスキン"
+          }
+        },
+        "64d513d3-8e7f-40ed-a37f-d1a8a0301361": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "ラ-ロッシュ-ポゼ"
+          }
+        },
+        "ac9cf853-1ab8-4805-bf76-3d6fc996d571": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "サンソリット-1"
+          }
+        },
+        "a594a702-0cf5-4b08-b7e9-d8a4c5113660": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "d-seriesデオドラントシリーズ"
+          }
+        },
+        "ffb99243-5731-4184-8def-eb0052c73053": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "wiqo"
+          }
+        },
+        "e221fb23-25f2-40f2-bf8d-0e452b1dc5e1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "リセルプロ"
+          }
+        },
+        "7a8a2f20-02a7-4c46-81c1-7f843f978db5": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "ピュアメル"
           }
         }
       },
       "block_order": [
         "template--14862070874154__c7627538-6c12-4f4b-a72a-df4d9289e159-167090213079a5d56b-0",
         "template--14862070874154__c7627538-6c12-4f4b-a72a-df4d9289e159-167090213079a5d56b-1",
-        "template--14862070874154__c7627538-6c12-4f4b-a72a-df4d9289e159-167090213079a5d56b-2"
+        "template--14862070874154__c7627538-6c12-4f4b-a72a-df4d9289e159-167090213079a5d56b-2",
+        "2aaa83f2-0c8b-47c7-8ef3-4caa2dcaafff",
+        "64d513d3-8e7f-40ed-a37f-d1a8a0301361",
+        "ac9cf853-1ab8-4805-bf76-3d6fc996d571",
+        "a594a702-0cf5-4b08-b7e9-d8a4c5113660",
+        "ffb99243-5731-4184-8def-eb0052c73053",
+        "e221fb23-25f2-40f2-bf8d-0e452b1dc5e1",
+        "7a8a2f20-02a7-4c46-81c1-7f843f978db5"
       ],
       "settings": {
         "title": "BRAND LIST",

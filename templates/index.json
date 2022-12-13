@@ -198,6 +198,18 @@
         "subtitle": "<p>咲くらクリニックスペシャルセット<\/p>",
         "description": "<p>咲くらクリニックのオリジナルの<br\/>お得なセット商品を集めました。<\/p>"
       }
+    },
+    "a4e22208-d3be-4bf1-b698-0b9ce780e774": {
+      "type": "information",
+      "settings": {
+        "title": "INFORMATION",
+        "heading_size": "h1",
+        "description": "",
+        "info_list": "news",
+        "post_limit": 3,
+        "info_list_date": false,
+        "info_list_category": false
+      }
     }
   },
   "order": [
@@ -205,6 +217,7 @@
     "featured_products",
     "3039fa5f-ec94-4485-aa0c-6b0714b980d1",
     "c7627538-6c12-4f4b-a72a-df4d9289e159",
-    "5c52ae51-ea07-433b-a2a7-e078e3627821"
+    "5c52ae51-ea07-433b-a2a7-e078e3627821",
+    "a4e22208-d3be-4bf1-b698-0b9ce780e774"
   ]
 }

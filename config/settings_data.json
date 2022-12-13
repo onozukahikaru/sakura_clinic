@@ -41,10 +41,19 @@
               "heading": "送料無料（一部商品を除く）",
               "menu": "link-list"
             }
+          },
+          "8463cd69-c489-47dd-8643-498badc4dc55": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/logo_footer.jpg",
+              "image_width": 170,
+              "alignment": "right"
+            }
           }
         },
         "block_order": [
-          "footer-0"
+          "footer-0",
+          "8463cd69-c489-47dd-8643-498badc4dc55"
         ],
         "settings": {
           "color_scheme": "background-1",

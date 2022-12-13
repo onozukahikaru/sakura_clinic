@@ -103,7 +103,7 @@
     "product": {
       "add_to_cart": "カートに追加する",
       "description": "商品説明",
-      "on_sale": "セール",
+      "on_sale": "SALE",
       "product_variants": "商品バリエーション",
       "quantity": {
         "label": "数量",
@@ -114,7 +114,7 @@
       "price": {
         "from_price_html": "{{ price }}から",
         "regular_price": "通常価格",
-        "sale_price": "セール価格",
+        "sale_price": "SALE価格",
         "unit_price": "単価"
       },
       "share": "この商品を共有する",

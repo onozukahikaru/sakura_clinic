@@ -76,12 +76,28 @@
     "featured_products": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
+        "title": "NEW ITEMS",
         "collection": "all",
         "products_to_show": 4,
         "show_view_all": true,
         "swipe_on_mobile": false,
         "image_ratio": "square",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
+    },
+    "3039fa5f-ec94-4485-aa0c-6b0714b980d1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "BEST SALER",
+        "collection": "",
+        "products_to_show": 4,
+        "show_view_all": true,
+        "swipe_on_mobile": false,
+        "image_ratio": "adapt",
         "show_secondary_image": false,
         "add_image_padding": false,
         "show_image_outline": true,
@@ -129,6 +145,7 @@
   "order": [
     "9213119a-863c-47fd-91a6-eb9479167a91",
     "featured_products",
+    "3039fa5f-ec94-4485-aa0c-6b0714b980d1",
     "c7627538-6c12-4f4b-a72a-df4d9289e159"
   ]
 }

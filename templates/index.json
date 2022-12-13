@@ -204,7 +204,7 @@
       "settings": {
         "title": "INFORMATION",
         "heading_size": "h1",
-        "description": "",
+        "description": "<p>お知らせ<\/p>",
         "info_list": "news",
         "post_limit": 3,
         "info_list_date": false,

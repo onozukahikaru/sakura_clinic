@@ -1,0 +1,119 @@
+{%- assign blog = blogs[section.settings.news_list] -%}
+
+<div id="section-info-list">
+  <div class="container">
+    <div class="info-list-heading">
+      <h2 class="title">
+        {%- if section.settings.title != blank -%}
+          <h2 class="title {{ section.settings.heading_size }}">{{ section.settings.title | escape }}</h2>
+        {%- endif -%}
+        {%- if section.settings.description != blank or section.settings.show_description and section.settings.information.description != empty -%}
+          <div class="information__description {{ section.settings.description_style }}">{%- if section.settings.show_description -%}{{ section.settings.information.description }}{%- else -%}{{ section.settings.description }}{% endif %}</div>
+        {%- endif -%}
+      </h2>
+    </div>
+      <div class="info-list">
+        {% for article in blog.articles limit: section.settings.post_limit %}
+        	<div class="info-list-item">
+              <a href="{{ article.url }}">
+                <div class="info-list-inner">
+                  {% if section.settings.news_list_date %}
+                    <span class="info-list-date">{{ article.published_at | date: "%Y/%m/%d" }}</span>
+                  {% endif %}
+                  {% if section.settings.news_list_category %}
+                    <span class="info-list-category">{{ article.tags }}</span>
+                  {% endif %}
+                </div>
+                <div class="info-list-title">{{ article.title }}</div>
+              </a>
+        	</div>
+        {% endfor %}
+      </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "お知らせ",
+  "class": "section_information",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "INFORMATION",
+      "label": "見出し"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "説明"
+    },
+    {
+      "id": "info_list",
+      "type": "blog",
+      "label": "表示するブログ記事を選択"
+    },
+    {
+      "id": "post_limit",
+      "type": "range",
+      "label": "表示数を選択",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "id": "info_list_date",
+      "type": "checkbox",
+      "label": "日付を表示する",
+      "default": true
+    },
+    {
+      "id": "info_list_category",
+      "type": "checkbox",
+      "label": "カテゴリーを表示する",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "お知らせ",
+      "category": "お知らせ"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+  
+  @media screen and (max-width: 768px){
+    
+  }
+  @media screen and (min-width: 769px){
+    
+    
+  }
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

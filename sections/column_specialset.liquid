@@ -34,20 +34,77 @@
         <div class="collage__item collage__item--{{ block.type }} collage__item--{{ section.settings.desktop_layout }}" {{ block.shopify_attributes }}>
           {%- case block.type -%}
             {%- when 'product' -%}
-              {% render 'card-product',
-                card_product: block.settings.product,
-                media_aspect_ratio: 'adapt',
-                show_secondary_image: block.settings.second_image,
-                extend_height: true
-              %}
-            {%- when 'collection' -%}
-              {% render 'card-collection',
-                card_collection: block.settings.collection,
-                media_aspect_ratio: 'adapt',
-                columns: 2,
-                extend_height: true,
-                wrapper_class: section.settings.card_styles
-              %}
+              <div class="collage-card collage-product card-wrapper">
+                {%- if block.settings.product != blank -%}
+                  {%- assign featured_media = block.settings.product.selected_or_first_available_variant.featured_media | default: block.settings.product.featured_media -%}
+                  <div class="collage-content card{% if block.settings.secondary_background %} card-colored color-background-1{% endif %}{% if block.settings.image_padding %} collage-card-spacing{% endif %}" {{ block.shopify_attributes }}>
+                    {%- if featured_media != blank -%}
+                      <div class="collage-content__info card-information card-information__wrapper">
+                        <h3 class="card-information__text h4"><a href="{{ block.settings.product.url }}" class="full-unstyled-link">{{ block.settings.product.title | escape }}</a></h3>
+                        <span class="price">{% render 'price', product: block.settings.product %}</span>
+                      </div>
+                      
+                      <div class="collage-card__image-wrapper media media--transparent media--hover-effect">
+                        <img
+                          srcset="{%- if featured_media.width >= 550 -%}{{ featured_media | img_url: '550x' }} 550w,{%- endif -%}
+                            {%- if featured_media.width >= 720 -%}{{ featured_media | img_url: '720x' }} 720w,{%- endif -%}
+                            {%- if featured_media.width >= 990 -%}{{ featured_media | img_url: '990x' }} 990w,{%- endif -%}
+                            {%- if featured_media.width >= 1100 -%}{{ featured_media | img_url: '1100x' }} 1100w,{%- endif -%}
+                            {%- if featured_media.width >= 1500 -%}{{ featured_media | img_url: '1500x' }} 1500w,{%- endif -%}
+                            {%- if featured_media.width >= 2200 -%}{{ featured_media | img_url: '2200x' }} 2200w,{%- endif -%}
+                            {%- if featured_media.width >= 3000 -%}{{ featured_media | img_url: '3000x' }} 3000w,{%- endif -%}
+                            {{ featured_media | img_url: 'master' }} {{ featured_media.width }}w"
+                          src="{{ featured_media | img_url: '1500x' }}"
+                          sizes="(min-width: {{ settings.page_width }}px) {% if section.blocks.size == 1 %}calc({{ settings.page_width }}px - 100px){% else %}{{ settings.page_width | minus: 100 | times: 0.67 | round }}px{% endif %}, (min-width: 750px){% if section.blocks.size == 1 %} calc(100vw - 100px){% else %} 500px{% endif %}, calc(100vw - 30px)"
+                          alt="{{ featured_media.alt | escape }}"
+                          loading="lazy"
+                          width="{{ featured_media.width }}"
+                          height="{{ featured_media.height }}"
+                          class="collage-card__image"
+                        >
+                      </div>
+                      <div class="collage-product__badge">
+                        <div class="card__badge">
+                          {%- if block.settings.product.available == false -%}
+                            <span class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}">{{ 'products.product.sold_out' | t }}</span>
+                          {%- elsif block.settings.product.compare_at_price > block.settings.product.price and block.settings.product.available -%}
+                            <span class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}">{{ 'products.product.on_sale' | t }}</span>
+                          {%- endif -%}
+                        </div>
+                      </div>
+                    {%- else -%}
+                      <div class="collage-card__no-image card-colored color-background-1 card__text-spacing center">
+                        <h3 class="h2"><a href="{{ block.settings.product.url }}" class="full-unstyled-link">{{ block.settings.product.title | escape }}</a></h3>
+                      </div>
+                      <div class="collage-product__badge">
+                        <div class="card__badge">
+                          {%- if block.settings.product.available == false -%}
+                            <span class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}">
+                              {{ 'products.product.sold_out' | t }}
+                            </span>
+                          {%- elsif block.settings.product.compare_at_price > block.settings.product.price and block.settings.product.available -%}
+                            <span class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}">
+                              {{ 'products.product.on_sale' | t }}
+                            </span>
+                          {%- endif -%}
+                        </div>
+                      </div>
+                      <div class="collage-content__info">
+                        {% render 'price', product: block.settings.product %}
+                      </div>
+                    {%- endif -%}
+                  </div>
+                {%- else -%}
+                  <div class="collage-content">
+                    <div class="collage-card__no-image card-colored color-background-1 card__text-spacing center">
+                      <h3 class="h2">{{ 'onboarding.product_title' | t }}</h3>
+                    </div>
+                    <div class="collage-content__info">
+                      <span class="price">{% render 'price' %}</span>
+                    </div>
+                  </div>
+                {%- endif -%}
+              </div>
           {%- endcase -%}
         </div>
       {%- endfor -%}
@@ -65,26 +122,6 @@
       "id": "heading",
       "default": "SPECIAL SET",
       "label": "t:sections.collage.settings.heading.label"
-    },
-    {
-      "type": "select",
-      "id": "heading_size",
-      "options": [
-        {
-          "value": "h2",
-          "label": "t:sections.all.heading_size.options__1.label"
-        },
-        {
-          "value": "h1",
-          "label": "t:sections.all.heading_size.options__2.label"
-        },
-        {
-          "value": "h0",
-          "label": "t:sections.all.heading_size.options__3.label"
-        }
-      ],
-      "default": "h1",
-      "label": "t:sections.all.heading_size.label"
     },
     {
       "type": "richtext",
@@ -106,23 +143,6 @@
           "type": "product",
           "id": "product",
           "label": "t:sections.collage.blocks.product.settings.product.label"
-        },
-        {
-          "type": "checkbox",
-          "id": "second_image",
-          "default": false,
-          "label": "t:sections.collage.blocks.product.settings.second_image.label"
-        }
-      ]
-    },
-    {
-      "type": "collection",
-      "name": "t:sections.collage.blocks.collection.name",
-      "settings": [
-        {
-          "type": "collection",
-          "id": "collection",
-          "label": "t:sections.collage.blocks.collection.settings.collection.label"
         }
       ]
     }

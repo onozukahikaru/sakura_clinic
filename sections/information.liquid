@@ -1,98 +1,104 @@
-{%- assign blog = blogs[section.settings.news_list] -%}
+<link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'section-rich-text.css' | asset_url }}" media="print" onload="this.media='all'">
 
-<div id="section-info-list">
-  <div class="container">
-    <div class="info-list-heading">
-      <h2 class="title">
-        {%- if section.settings.title != blank -%}
-          <h2 class="title {{ section.settings.heading_size }}">{{ section.settings.title | escape }}</h2>
-        {%- endif -%}
-        {%- if section.settings.description != blank or section.settings.show_description and section.settings.information.description != empty -%}
-          <div class="information__description {{ section.settings.description_style }}">{%- if section.settings.show_description -%}{{ section.settings.information.description }}{%- else -%}{{ section.settings.description }}{% endif %}</div>
-        {%- endif -%}
-      </h2>
+<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'section-rich-text.css' | asset_url | stylesheet_tag }}</noscript>
+<h2 class="{{ block.settings.heading_size }}" {{ block.shopify_attributes }}>{{ section.settings.heading | escape }}</h2>
+<div class="{% unless section.settings.full_width %}page-width{% endunless %}">
+  <div class="rich-text color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width{% endif %}">
+    <div class="rich-text__blocks">
+      <h2 class="{{ block.settings.heading_size }}" {{ block.shopify_attributes }}>{{ section.settings.text_1 | escape }}</h2>
+      <div class="rich-text__text rte" {{ block.shopify_attributes }}>{{ section.settings.subtext_1 }}</div>
+      <a href="{{ section.settings.link_1 }}">
+        <img
+          srcset= "{{ section.settings.image_1 | img_url }}"
+          src="{{ section.settings.image_1 | img_url: '400x' }}"
+          alt="{{ section.settings.image_1.alt }}"
+          loading="lazy"
+          width="{{ section.settings.image_1.width }}"
+          height="{{ section.settings.image_1.height }}"
+          style="max-width: min(100%, {{ section.settings.image_width }}px);"
+        >
+      </a>
+  　</div>
+    <div class="rich-text__blocks">
+        <h2 class="{{ block.settings.heading_size }}" {{ block.shopify_attributes }}>{{ section.settings.text_2 | escape }}</h2>
+        <div class="rich-text__text rte" {{ block.shopify_attributes }}>{{ section.settings.subtext_2 }}</div>
+        <a href="{{ section.settings.link_2 }}">
+          <img
+            srcset= "{{ section.settings.image_2 | img_url }}"
+            src="{{ section.settings.image_2 | img_url: '400x' }}"
+            alt="{{ section.settings.image_2.alt }}"
+            loading="lazy"
+            width="{{ section.settings.image_2.width }}"
+            height="{{ section.settings.image_2.height }}"
+            style="max-width: min(100%, {{ section.settings.image_width }}px);"
+          >
+          </a>
     </div>
-      <div class="info-list">
-        {% for article in blog.articles limit: section.settings.post_limit %}
-        	<div class="info-list-item">
-              <a href="{{ article.url }}">
-                <div class="info-list-inner">
-                  {% if section.settings.news_list_date %}
-                    <span class="info-list-date">{{ article.published_at | date: "%Y/%m/%d" }}</span>
-                  {% endif %}
-                  {% if section.settings.news_list_category %}
-                    <span class="info-list-category">{{ article.tags }}</span>
-                  {% endif %}
-                </div>
-                <div class="info-list-title">{{ article.title }}</div>
-              </a>
-        	</div>
-        {% endfor %}
-      </div>
   </div>
 </div>
 
 {% schema %}
 {
   "name": "お知らせ",
-  "class": "section_information",
+  "tag": "section",
+  "class": "spaced-section spaced-section--full-width",
   "settings": [
     {
-      "type": "text",
-      "id": "title",
-      "default": "INFORMATION",
-      "label": "見出し"
+      "type": "header",
+      "content": "1つめ"
     },
     {
-      "type": "select",
-      "id": "heading_size",
-      "options": [
-        {
-          "value": "h2",
-          "label": "t:sections.all.heading_size.options__1.label"
-        },
-        {
-          "value": "h1",
-          "label": "t:sections.all.heading_size.options__2.label"
-        },
-        {
-          "value": "h0",
-          "label": "t:sections.all.heading_size.options__3.label"
-        }
-      ],
-      "default": "h1",
-      "label": "t:sections.all.heading_size.label"
+      "type": "text",
+      "id": "heading",
+      "default": "INFORMATION",
+      "label": "セクションタイトル"
+    },
+    {
+      "type": "text",
+      "id": "text_1",
+      "label": "タイトル"
     },
     {
       "type": "richtext",
-      "id": "description",
-      "label": "説明"
+      "id": "subtext_1",
+      "default": "<p>Share store details, promotions, or brand content with your customers.</p>",
+      "label": "t:sections.footer.blocks.text.settings.subtext.label"
     },
     {
-      "id": "info_list",
-      "type": "blog",
-      "label": "表示するブログ記事を選択"
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "t:sections.image-banner.settings.image.label"
     },
     {
-      "id": "post_limit",
-      "type": "range",
-      "label": "表示数を選択",
-      "min": 1,
-      "max": 6,
-      "step": 1,
-      "default": 3
+      "type": "url",
+      "id": "link_1",
+      "label": "URL"
     },
     {
-      "id": "info_list_date",
-      "type": "checkbox",
-      "label": "日付を表示する",
-      "default": true
+      "type": "header",
+      "content": "2つめ"
     },
     {
-      "id": "info_list_category",
-      "type": "checkbox",
-      "label": "カテゴリーを表示する",
-      "default": true
+      "type": "text",
+      "id": "text_2",
+      "label": "タイトル"
+    },
+    {
+      "type": "richtext",
+      "id": "subtext_2",
+      "default": "<p>Share store details, promotions, or brand content with your customers.</p>",
+      "label": "t:sections.footer.blocks.text.settings.subtext.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "t:sections.image-banner.settings.image_2.label"
+    },{
+      "type": "url",
+      "id": "link_2",
+      "label": "URL"
     }
   ],
   "presets": [
@@ -103,17 +109,3 @@
   ]
 }
 {% endschema %}
-
-{% stylesheet %}
-  
-  @media screen and (max-width: 768px){
-    
-  }
-  @media screen and (min-width: 769px){
-    
-    
-  }
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}

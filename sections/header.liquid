@@ -94,22 +94,19 @@
             <div class="menu-drawer__inner-container">
               <div class="menu-drawer__navigation-container">
                 <nav class="menu-drawer__navigation">
-                  <ul class="menu-drawer__menu list-menu" role="list">
+                  <ul class="menu-drawer__menu has-submenu list-menu" role="list">
                     {%- for link in section.settings.menu.links -%}
                       <li>
                         {%- if link.links != blank -%}
                           <details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
                             <summary class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}">
                               {{ link.title | escape }}
-                              {% render 'icon-arrow' %}
+                              {% render 'icon-plus-menu' %}
+                              {% render 'icon-minus-menu' %}
                               {% render 'icon-caret' %}
                             </summary>
                             <div id="link-{{ link.title | escape }}" class="menu-drawer__submenu motion-reduce" tabindex="-1">
                               <div class="menu-drawer__inner-submenu">
-                                <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
-                                  {% render 'icon-arrow' %}
-                                  {{ link.title | escape }}
-                                </button>
                                 <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
                                   {%- for childlink in link.links -%}
                                     <li>
@@ -121,7 +118,8 @@
                                         <details id="Details-menu-drawer-submenu-{{ forloop.index }}">
                                           <summary class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
                                             {{ childlink.title | escape }}
-                                            {% render 'icon-arrow' %}
+                                            {% render 'icon-plus-menu' %}
+                                            {% render 'icon-minus-menu' %}
                                             {% render 'icon-caret' %}
                                           </summary>
                                           <div id="childlink-{{ childlink.title | escape }}" class="menu-drawer__submenu motion-reduce">
@@ -150,6 +148,7 @@
                         {%- else -%}
                           <a href="{{ link.url }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
                             {{ link.title | escape }}
+                            {% render 'icon-arrow-blue' %}
                           </a>
                         {%- endif -%}
                       </li>
@@ -167,14 +166,15 @@
                           echo 'customer.log_in' | t
                         endif
                       -%}
+                      {% render 'icon-arrow-blue' %}
                     </a>
                   {%- endif -%}
                   <ul class="list list-social list-unstyled" role="list">
-                    {%- if settings.social_twitter_link != blank -%}
+                    {%- if settings.social_instagram_link != blank -%}
                       <li class="list-social__item">
-                        <a href="{{ settings.social_twitter_link }}" class="list-social__link link">
-                          {%- render 'icon-twitter' -%}
-                          <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
+                        <a href="{{ settings.social_instagram_link }}" class="list-social__link link">
+                          {%- render 'icon-instagram' -%}
+                          <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
                         </a>
                       </li>
                     {%- endif -%}
@@ -186,19 +186,25 @@
                         </a>
                       </li>
                     {%- endif -%}
+                    {%- if settings.social_twitter_link != blank -%}
+                      <li class="list-social__item">
+                        <a href="{{ settings.social_twitter_link }}" class="list-social__link link">
+                          {%- render 'icon-twitter' -%}
+                          <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
+                        </a>
+                      </li>
+                    {%- endif -%}
+                      <li class="list-social__item">
+                        <a href="https://line.me/R/ti/p/@381ufmhm" target="_blank" class="list-social__link link">
+                          {%- render 'icon-line' -%}
+                        </a>
+                      </li>
+
                     {%- if settings.social_pinterest_link != blank -%}
                       <li class="list-social__item">
                         <a href="{{ settings.social_pinterest_link }}" class="list-social__link link">
                           {%- render 'icon-pinterest' -%}
                           <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
-                        </a>
-                      </li>
-                    {%- endif -%}
-                    {%- if settings.social_instagram_link != blank -%}
-                      <li class="list-social__item">
-                        <a href="{{ settings.social_instagram_link }}" class="list-social__link link">
-                          {%- render 'icon-instagram' -%}
-                          <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
                         </a>
                       </li>
                     {%- endif -%}
@@ -252,12 +258,16 @@
     {%- endif -%}
 
     {%- if section.settings.logo_position == 'top-center' or section.settings.menu == blank -%}
-      <details-modal class="header__search">
+      {% comment %} <details-modal class="header__search">
         <details>
           <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
             <span>
-              <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false" role="presentation">
-                <use href="#icon-search">
+              <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation" width="18.334" height="19.357" viewBox="0 0 18.334 19.357">
+                <g id="p_210" data-name="p 210" transform="translate(0 0)" fill="none">
+                  <path d="M7.661,0a7.8,7.8,0,0,1,7.661,7.925,7.8,7.8,0,0,1-7.661,7.925A7.8,7.8,0,0,1,0,7.925,7.8,7.8,0,0,1,7.661,0Z" stroke="none"/>
+                  <path d="M 7.661078929901123 0.9999980926513672 C 3.98814868927002 0.9999980926513672 0.9999990463256836 4.106657981872559 0.9999990463256836 7.925257682800293 C 0.9999990463256836 11.74385833740234 3.98814868927002 14.85051727294922 7.661078929901123 14.85051727294922 C 11.33400917053223 14.85051727294922 14.32215881347656 11.74385833740234 14.32215881347656 7.925257682800293 C 14.32215881347656 4.106657981872559 11.33400917053223 0.9999980926513672 7.661078929901123 0.9999980926513672 M 7.661078929901123 -1.9073486328125e-06 C 11.89217948913574 -1.9073486328125e-06 15.32215881347656 3.548257827758789 15.32215881347656 7.925257682800293 C 15.32215881347656 12.3022575378418 11.89217948913574 15.85051727294922 7.661078929901123 15.85051727294922 C 3.42997932434082 15.85051727294922 -9.5367431640625e-07 12.3022575378418 -9.5367431640625e-07 7.925257682800293 C -9.5367431640625e-07 3.548257827758789 3.42997932434082 -1.9073486328125e-06 7.661078929901123 -1.9073486328125e-06 Z" stroke="none" fill="#000"/>
+                </g>
+                <path id="p_209" data-name="p 209" d="M0,0,5.284,5.812" transform="translate(12.68 13.209)" fill="none" stroke="#000" stroke-width="1"/>
               </svg>
               <svg class="modal__toggle-close icon icon-close" aria-hidden="true" focusable="false" role="presentation">
                 <use href="#icon-close">
@@ -294,8 +304,12 @@
                     <label class="field__label" for="Search-In-Modal-1">{{ 'general.search.search' | t }}</label>
                     <input type="hidden" name="options[prefix]" value="last">
                     <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
-                      <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation">
-                        <use href="#icon-search">
+                      <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation" width="18.334" height="19.357" viewBox="0 0 18.334 19.357">
+                        <g id="p_210" data-name="p 210" transform="translate(0 0)" fill="none">
+                          <path d="M7.661,0a7.8,7.8,0,0,1,7.661,7.925,7.8,7.8,0,0,1-7.661,7.925A7.8,7.8,0,0,1,0,7.925,7.8,7.8,0,0,1,7.661,0Z" stroke="none"/>
+                          <path d="M 7.661078929901123 0.9999980926513672 C 3.98814868927002 0.9999980926513672 0.9999990463256836 4.106657981872559 0.9999990463256836 7.925257682800293 C 0.9999990463256836 11.74385833740234 3.98814868927002 14.85051727294922 7.661078929901123 14.85051727294922 C 11.33400917053223 14.85051727294922 14.32215881347656 11.74385833740234 14.32215881347656 7.925257682800293 C 14.32215881347656 4.106657981872559 11.33400917053223 0.9999980926513672 7.661078929901123 0.9999980926513672 M 7.661078929901123 -1.9073486328125e-06 C 11.89217948913574 -1.9073486328125e-06 15.32215881347656 3.548257827758789 15.32215881347656 7.925257682800293 C 15.32215881347656 12.3022575378418 11.89217948913574 15.85051727294922 7.661078929901123 15.85051727294922 C 3.42997932434082 15.85051727294922 -9.5367431640625e-07 12.3022575378418 -9.5367431640625e-07 7.925257682800293 C -9.5367431640625e-07 3.548257827758789 3.42997932434082 -1.9073486328125e-06 7.661078929901123 -1.9073486328125e-06 Z" stroke="none" fill="#000"/>
+                        </g>
+                        <path id="p_209" data-name="p 209" d="M0,0,5.284,5.812" transform="translate(12.68 13.209)" fill="none" stroke="#000" stroke-width="1"/>
                       </svg>
                     </button>
                   </div>
@@ -323,30 +337,30 @@
             </div>
           </div>
         </details>
-      </details-modal>
+      </details-modal> {% endcomment %}
     {%- endif -%}
 
     {%- if request.page_type == 'index' -%}
-      <h1 class="header__heading">
+      <h1 class="visually-hidden">咲くらクリニック オンラインショップ</h1>
     {%- endif -%}
+      <div class="header__heading">
         <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
           {%- if section.settings.logo != blank -%}
             {%- assign image_size = section.settings.logo_width | append: 'x' -%}
             <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
               src="{{ section.settings.logo | img_url: image_size }}"
               loading="lazy"
-              class="header__heading-logo"
+              class="header__heading-logo only_pc"
               width="{{ section.settings.logo.width }}"
               height="{{ section.settings.logo.height }}"
               alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
             >
+            <img src="{{ 'logo_sp.png' | asset_img_url: '600x' }}" class="only_sp" alt="咲くらクリニック">
           {%- else -%}
             <span class="h2">{{ shop.name }}</span>
           {%- endif -%}
         </a>
-    {%- if request.page_type == 'index' -%}
-      </h1>
-    {%- endif -%}
+      </div>
 
     {%- if section.settings.menu != blank -%}
       <nav class="header__inline-menu">
@@ -360,12 +374,22 @@
                       <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                       {% render 'icon-caret' %}
                     </summary>
+                    <script>
+                      document.getElementById("Details-HeaderMenu-{{ forloop.index }}").addEventListener("mouseenter", function( event ) {
+                      event.target.setAttribute("open", "");
+                      });
+                                              
+                      document.getElementById("Details-HeaderMenu-{{ forloop.index }}").addEventListener("mouseleave", function( event ) {
+                      event.target.removeAttribute("open");
+                      });
+                    </script>
                     <ul id="HeaderMenu-MenuList-{{ forloop.index }}" class="header__submenu list-menu list-menu--disclosure caption-large motion-reduce" role="list" tabindex="-1">
                       {%- for childlink in link.links -%}
                         <li>
                           {%- if childlink.links == blank -%}
                             <a href="{{ childlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
                               {{ childlink.title | escape }}
+                              {% render 'icon-arrow-blue' %}
                             </a>
                           {%- else -%}
                             <details id="Details-HeaderSubMenu-{{ forloop.index }}">
@@ -405,8 +429,12 @@
         <details>
           <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
             <span>
-              <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false" role="presentation">
-                <use href="#icon-search">
+              <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation" width="18.334" height="19.357" viewBox="0 0 18.334 19.357">
+                <g id="p_210" data-name="p 210" transform="translate(0 0)" fill="none">
+                  <path d="M7.661,0a7.8,7.8,0,0,1,7.661,7.925,7.8,7.8,0,0,1-7.661,7.925A7.8,7.8,0,0,1,0,7.925,7.8,7.8,0,0,1,7.661,0Z" stroke="none"/>
+                  <path d="M 7.661078929901123 0.9999980926513672 C 3.98814868927002 0.9999980926513672 0.9999990463256836 4.106657981872559 0.9999990463256836 7.925257682800293 C 0.9999990463256836 11.74385833740234 3.98814868927002 14.85051727294922 7.661078929901123 14.85051727294922 C 11.33400917053223 14.85051727294922 14.32215881347656 11.74385833740234 14.32215881347656 7.925257682800293 C 14.32215881347656 4.106657981872559 11.33400917053223 0.9999980926513672 7.661078929901123 0.9999980926513672 M 7.661078929901123 -1.9073486328125e-06 C 11.89217948913574 -1.9073486328125e-06 15.32215881347656 3.548257827758789 15.32215881347656 7.925257682800293 C 15.32215881347656 12.3022575378418 11.89217948913574 15.85051727294922 7.661078929901123 15.85051727294922 C 3.42997932434082 15.85051727294922 -9.5367431640625e-07 12.3022575378418 -9.5367431640625e-07 7.925257682800293 C -9.5367431640625e-07 3.548257827758789 3.42997932434082 -1.9073486328125e-06 7.661078929901123 -1.9073486328125e-06 Z" stroke="none" fill="#000"/>
+                </g>
+                <path id="p_209" data-name="p 209" d="M0,0,5.284,5.812" transform="translate(12.68 13.209)" fill="none" stroke="#000" stroke-width="1"/>
               </svg>
               <svg class="modal__toggle-close icon icon-close" aria-hidden="true" focusable="false" role="presentation">
                 <use href="#icon-close">
@@ -443,8 +471,12 @@
                     <label class="field__label" for="Search-In-Modal">{{ 'general.search.search' | t }}</label>
                     <input type="hidden" name="options[prefix]" value="last">
                     <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
-                      <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation">
-                        <use href="#icon-search">
+                      <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation" width="18.334" height="19.357" viewBox="0 0 18.334 19.357">
+                        <g id="p_210" data-name="p 210" transform="translate(0 0)" fill="none">
+                          <path d="M7.661,0a7.8,7.8,0,0,1,7.661,7.925,7.8,7.8,0,0,1-7.661,7.925A7.8,7.8,0,0,1,0,7.925,7.8,7.8,0,0,1,7.661,0Z" stroke="none"/>
+                          <path d="M 7.661078929901123 0.9999980926513672 C 3.98814868927002 0.9999980926513672 0.9999990463256836 4.106657981872559 0.9999990463256836 7.925257682800293 C 0.9999990463256836 11.74385833740234 3.98814868927002 14.85051727294922 7.661078929901123 14.85051727294922 C 11.33400917053223 14.85051727294922 14.32215881347656 11.74385833740234 14.32215881347656 7.925257682800293 C 14.32215881347656 4.106657981872559 11.33400917053223 0.9999980926513672 7.661078929901123 0.9999980926513672 M 7.661078929901123 -1.9073486328125e-06 C 11.89217948913574 -1.9073486328125e-06 15.32215881347656 3.548257827758789 15.32215881347656 7.925257682800293 C 15.32215881347656 12.3022575378418 11.89217948913574 15.85051727294922 7.661078929901123 15.85051727294922 C 3.42997932434082 15.85051727294922 -9.5367431640625e-07 12.3022575378418 -9.5367431640625e-07 7.925257682800293 C -9.5367431640625e-07 3.548257827758789 3.42997932434082 -1.9073486328125e-06 7.661078929901123 -1.9073486328125e-06 Z" stroke="none" fill="#000"/>
+                        </g>
+                        <path id="p_209" data-name="p 209" d="M0,0,5.284,5.812" transform="translate(12.68 13.209)" fill="none" stroke="#000" stroke-width="1"/>
                       </svg>
                     </button>
                   </div>
@@ -501,7 +533,7 @@
         {%- if cart != empty -%}
           <div class="cart-count-bubble">
             {%- if cart.item_count < 100 -%}
-              <span aria-hidden="true">{{ cart.item_count }}</span>
+              <span aria-hidden="true"></span>
             {%- endif -%}
             <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
           </div>

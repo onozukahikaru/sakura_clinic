@@ -13,15 +13,14 @@
       <a href="{{ section.settings.link_1 }}">
         <img
           srcset= "{{ section.settings.image_1 | img_url }}"
-          src="{{ section.settings.image_1 | img_url: '400x' }}"
+          src="{{ section.settings.image_1 | img_url }}"
           alt="{{ section.settings.image_1.alt }}"
           loading="lazy"
           width="{{ section.settings.image_1.width }}"
           height="{{ section.settings.image_1.height }}"
-          style="max-width: min(100%, {{ section.settings.image_width }}px);"
         >
       </a>
-  　</div>
+    </div>
     <div class="rich-text__blocks">
         <h2 class="{{ block.settings.heading_size }}" {{ block.shopify_attributes }}>{{ section.settings.text_2 | escape }}</h2>
         <div class="rich-text__text rte" {{ block.shopify_attributes }}>{{ section.settings.subtext_2 }}</div>
@@ -33,7 +32,7 @@
 {
   "name": "お知らせ",
   "tag": "section",
-  "class": "spaced-section spaced-section--full-width",
+  "class": "spaced-section spaced-section--full-width section_info",
   "settings": [
     {
       "type": "header",

@@ -38,7 +38,7 @@
           "footer-0": {
             "type": "link_list",
             "settings": {
-              "heading": "送料無料（一部商品を除く）",
+              "heading": "送料無料",
               "menu": "link-list"
             }
           }

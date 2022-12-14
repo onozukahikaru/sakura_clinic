@@ -410,5 +410,10 @@
       "copy_code_success": "コードは正常にコピーされました",
       "print_gift_card": "印刷する"
     }
+  },
+  "shopify": {
+    "links": {
+      "powered_by_shopify": " "
+    }
   }
 }

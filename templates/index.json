@@ -40,6 +40,40 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "168f0e0f-d8eb-4fd4-a6dc-03c266b7ef47": {
+      "type": "featured-newitems",
+      "settings": {
+        "title": "NEW ITEMS",
+        "subtitle": "新商品",
+        "collection": "新着商品",
+        "products_to_show": 4,
+        "show_view_all": true,
+        "swipe_on_mobile": false,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
+    },
+    "77d949fd-2acd-4cec-b7ef-161adedc495d": {
+      "type": "featured-bestseller",
+      "settings": {
+        "title": "BEST SELLER",
+        "subtitle": "ベストセラー",
+        "collection": "全て表示",
+        "products_to_show": 5,
+        "show_view_all": true,
+        "swipe_on_mobile": false,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
+    },
     "5c52ae51-ea07-433b-a2a7-e078e3627821": {
       "type": "column_specialset",
       "blocks": {
@@ -70,6 +104,7 @@
       "type": "information",
       "settings": {
         "heading": "INFORMATION",
+        "subheading": "お知らせ",
         "text_1": "クーポン配布中",
         "subtext_1": "<p>当オンラインショップでは定期的にクーポンを配布しています。クーポンは、当ショップの公式LINEにお友達登録をするとゲットできます。<\/p>",
         "image_1": "shopify:\/\/shop_images\/banner_line.jpg",
@@ -81,6 +116,8 @@
   },
   "order": [
     "673cffd3-4707-4310-90d2-3c7091a8413d",
+    "168f0e0f-d8eb-4fd4-a6dc-03c266b7ef47",
+    "77d949fd-2acd-4cec-b7ef-161adedc495d",
     "5c52ae51-ea07-433b-a2a7-e078e3627821",
     "a4e22208-d3be-4bf1-b698-0b9ce780e774"
   ]

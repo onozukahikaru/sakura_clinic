@@ -19,13 +19,13 @@
 
 <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
 
-<div class="color-{{ section.settings.color_scheme }} gradient isolate">
+<div class="isolate">
   <div class="page-width{% if section.settings.heading == blank %} no-heading{% endif %} section-{{ section.id }}-padding">
     <div>
       <div class="information__description">{{ section.settings.subtitle }}</div>
-      <h2 class="collage-wrapper-title {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h2>
+      <h2 class="collage-wrapper-title {{ section.settings.heading_size }} title">{{ section.settings.heading | escape }}</h2>
       <div class="information__description {{ section.settings.description_style }}">{{ section.settings.description }}</div>
-      <div class="collection-list-view-all">
+      <div class="collection-list-view-all only_pc">
         <a href="{{ routes.collections_url }}" class="button" id="ViewAllButton-{{ section.id }}" aria-labelledby="ViewAllButton-{{ section.id }} SectionHeading-{{ section.id }}">VIEW ALL</a>
       </div>
     </div>
@@ -108,6 +108,9 @@
           {%- endcase -%}
         </div>
       {%- endfor -%}
+    </div>
+    <div class="collection-list-view-all only_sp">
+      <a href="{{ routes.collections_url }}" class="button" id="ViewAllButton-{{ section.id }}" aria-labelledby="ViewAllButton-{{ section.id }} SectionHeading-{{ section.id }}">VIEW ALL</a>
     </div>
   </div>
 </div>

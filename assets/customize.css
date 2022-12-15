@@ -41,13 +41,6 @@ img{
 }
 
 /* header */
-.shopify-section-header-hidden {
-  transform: none;
-}
-.shopify-section-header-sticky{
-  position: fixed;
-  width: 100%;
-}
 header .cart-count-bubble{
   background: #48C0D0;
   width: 11px;
@@ -153,6 +146,23 @@ header .header__icon--cart .icon{
 .js .menu-drawer__submenu {
   position: inherit!important;
   border-left: none!important;
+}
+@media screen and (max-width: 768px){
+  header.header{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  header.header .header__heading-link{
+    max-width: 150px;
+  }
+  .shopify-section-header-hidden {
+    transform: none;
+  }
+  .shopify-section-header-sticky{
+    position: fixed;
+    width: 100%;
+  }
+  
 }
 
 /* pc menu */
@@ -378,5 +388,142 @@ footer.footer .list-social__link{
     padding-top: 2rem;
     padding-bottom: 2rem;
     border-top: 1px solid #5F6279;
+  }
+}
+
+
+/* メインビジュアル */
+.section-mainvisual .slider-counter__link--dots .dot{
+  border-color: #EFEFEF;
+  background: #EFEFEF;
+}
+.section-mainvisual .slider-counter__link--active.slider-counter__link--dots .dot{
+  border-color: #48C0D0;
+  background: #48C0D0;
+}
+.section-mainvisual .slider-button{
+  display: none;
+}
+.section-mainvisual .slideshow__controls{
+  border: none;
+}
+
+@media screen and (max-width: 768px){
+  .section-mainvisual .slider-counter__link--dots .dot{
+    width: 6px;
+    height: 6px;
+  }
+  .section-mainvisual slideshow-component{
+    padding: 0;
+  }
+}
+
+/* コレクション */
+.shopify-section h2.title{
+  font-size: 2.8rem;
+  display: flex;
+  align-items: center;
+}
+.shopify-section h2.title span{
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #969696;
+  margin-left: 1.5rem;
+}
+
+@media screen and (min-width: 769px){
+  .shopify-section h2.title{
+    font-size: 3.6rem;
+  }
+  .shopify-section h2.title span{
+    font-size: 1.6rem;
+  }
+}
+
+/* New Items */
+
+
+
+/* Best Seller */
+
+
+/* Brand List */
+.section_brandlist{
+  background: #FAFAFA;
+}
+.section_brandlist .collection-list .collection-list__item{
+  width: 33.33%;
+  max-width: 33.33%;
+}
+.section_brandlist .collection-list__item .card__text{
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  background: rgba(0,0,0, 0.6);
+  padding: 0.6rem;
+}
+.section_brandlist .card__text h3{
+  font-size: 1.2rem;
+  color: white;
+}
+@media screen and (min-width: 769px){
+  .section_brandlist .collection-list.grid--3-col-tablet .grid__item{
+    width: 20%;
+    max-width: 20%;
+  }
+  .section_brandlist .collection-list__item .card__text{
+    padding: 1rem;
+    text-align: center;
+  }
+  .section_brandlist .card__text h3{
+    font-size: 1.4rem;
+  }
+}
+
+/* スペシャルセット */
+.section_specialset {
+  background: url(../assets/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 534px;
+
+}
+.section_specialset .collage{
+  display: flex;
+}
+
+@media screen and (min-width: 769px){
+  .section_specialset{
+    height: 496px;
+  }
+  .section_specialset .collage:not(.collage--mobile) .media > .collage-card__image {
+    position: inherit;
+  }
+  .section_specialset .collage-card:not(.collage-card--left):not(.collage-card--right) > *{
+    position: inherit;
+  }
+  .section_specialset .page-width{
+    display: flex;
+  }
+  .section_specialset .collage__item{
+    max-width: 310px;
+  }
+}
+
+/* お知らせ */
+.section_info .rich-text {
+  display: flex;
+  flex-direction: column;
+}
+.section_info .rich-text__blocks{
+  margin: 0;
+}
+@media screen and (min-width: 769px){
+  .section_info .rich-text {
+    display: flex;
+    flex-direction: row;
   }
 }

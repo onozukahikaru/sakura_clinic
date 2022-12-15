@@ -5,7 +5,7 @@
 <noscript>{{ 'section-rich-text.css' | asset_url | stylesheet_tag }}</noscript>
 
 <div class="{% unless section.settings.full_width %}page-width{% endunless %}">
-  <h2 class="{{ block.settings.heading_size }}" {{ block.shopify_attributes }}>{{ section.settings.heading | escape }}</h2>
+  <h2 class="title" {{ block.shopify_attributes }}>{{ section.settings.heading | escape }}<span>{{ section.settings.subheading | escape }}</span></h2>
   <div class="rich-text color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width{% endif %}">
     <div class="rich-text__blocks">
       <h2 class="{{ block.settings.heading_size }}" {{ block.shopify_attributes }}>{{ section.settings.text_1 | escape }}</h2>
@@ -43,6 +43,12 @@
       "id": "heading",
       "default": "INFORMATION",
       "label": "セクションタイトル"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "default": "お知らせ",
+      "label": "セクションサブタイトル"
     },
     {
       "type": "text",

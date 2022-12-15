@@ -393,24 +393,24 @@ footer.footer .list-social__link{
 
 
 /* メインビジュアル */
-.section-mainvisual .swiper-pagination-bullet{
+.section_mainvisual .swiper-pagination-bullet{
   border-color: #EFEFEF;
   background: #EFEFEF;
   opacity: 1;
 }
-.section-mainvisual .swiper-pagination-bullet.swiper-pagination-bullet-active{
+.section_mainvisual .swiper-pagination-bullet.swiper-pagination-bullet-active{
   border-color: #48C0D0;
   background: #48C0D0;
 }
-.swiper-pagination{
+.section_mainvisual .swiper-pagination{
   position: inherit;
 }
 @media screen and (max-width: 768px){
-  .section-mainvisual .swiper-pagination-bullet{
+  .section_mainvisual .swiper-pagination-bullet{
     width: 6px;
     height: 6px;
   }
-  .section-mainvisual .page-width{
+  .section_mainvisual .page-width{
     padding: 0;
   }
 }

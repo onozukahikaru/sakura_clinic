@@ -23,21 +23,38 @@
             "image": "shopify:\/\/shop_images\/main-slide-03.jpg",
             "link": "shopify:\/\/collections\/エムディア"
           }
+        },
+        "103cefed-dfcd-4f41-bab5-97297ce0af7c": {
+          "type": "slide_sp",
+          "settings": {
+            "image_sp": "shopify:\/\/shop_images\/main-slide-01-sp_e6976749-55b9-4ef5-8788-02360756a7fa.jpg",
+            "link_sp": "shopify:\/\/collections\/revision-skincare"
+          }
+        },
+        "437fc3bb-c7d4-4a6f-bcbf-7163516b5a58": {
+          "type": "slide_sp",
+          "settings": {
+            "image_sp": "shopify:\/\/shop_images\/main-slide-02-sp_417daf9a-89e8-4a8f-8f5a-245d5924e086.jpg",
+            "link_sp": "shopify:\/\/collections\/ゼオスキンヘルス"
+          }
+        },
+        "6939b4f6-cc1e-49ee-bda8-89273b1c1536": {
+          "type": "slide_sp",
+          "settings": {
+            "image_sp": "shopify:\/\/shop_images\/main-slide-03-sp_c7bf4cb0-415f-4a6e-a296-ea8a7ce379cc.jpg",
+            "link_sp": "shopify:\/\/collections\/エムディア"
+          }
         }
       },
       "block_order": [
         "template--14862070874154__673cffd3-4707-4310-90d2-3c7091a8413d-167091790777e1be95-0",
         "template--14862070874154__673cffd3-4707-4310-90d2-3c7091a8413d-167091790777e1be95-1",
-        "6c6010d8-6491-4e2f-8069-5a46de2b4a2d"
+        "6c6010d8-6491-4e2f-8069-5a46de2b4a2d",
+        "103cefed-dfcd-4f41-bab5-97297ce0af7c",
+        "437fc3bb-c7d4-4a6f-bcbf-7163516b5a58",
+        "6939b4f6-cc1e-49ee-bda8-89273b1c1536"
       ],
       "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "dots",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "show_text_below": false,
-        "accessibility_info": "Slideshow about our brand"
       }
     },
     "168f0e0f-d8eb-4fd4-a6dc-03c266b7ef47": {

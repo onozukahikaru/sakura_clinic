@@ -393,27 +393,24 @@ footer.footer .list-social__link{
 
 
 /* メインビジュアル */
-.section-mainvisual .slider-counter__link--dots .dot{
+.section-mainvisual .swiper-pagination-bullet{
   border-color: #EFEFEF;
   background: #EFEFEF;
+  opacity: 1;
 }
-.section-mainvisual .slider-counter__link--active.slider-counter__link--dots .dot{
+.section-mainvisual .swiper-pagination-bullet.swiper-pagination-bullet-active{
   border-color: #48C0D0;
   background: #48C0D0;
 }
-.section-mainvisual .slider-button{
-  display: none;
+.swiper-pagination{
+  position: inherit;
 }
-.section-mainvisual .slideshow__controls{
-  border: none;
-}
-
 @media screen and (max-width: 768px){
-  .section-mainvisual .slider-counter__link--dots .dot{
+  .section-mainvisual .swiper-pagination-bullet{
     width: 6px;
     height: 6px;
   }
-  .section-mainvisual slideshow-component{
+  .section-mainvisual .page-width{
     padding: 0;
   }
 }

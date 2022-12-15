@@ -100,19 +100,6 @@
         "description": "<p>咲くらクリニックのオリジナルの<br\/>お得なセット商品を集めました。<\/p>"
       }
     },
-    "a4e22208-d3be-4bf1-b698-0b9ce780e774": {
-      "type": "information",
-      "settings": {
-        "heading": "INFORMATION",
-        "subheading": "お知らせ",
-        "text_1": "クーポン配布中",
-        "subtext_1": "<p>当オンラインショップでは定期的にクーポンを配布しています。クーポンは、当ショップの公式LINEにお友達登録をするとゲットできます。<\/p>",
-        "image_1": "shopify:\/\/shop_images\/banner_line.jpg",
-        "link_1": "https:\/\/line.me\/R\/ti\/p\/@381ufmhm",
-        "text_2": "発送業務について",
-        "subtext_2": "<p>クリニック休診日の水曜日、日曜日は発送業務を停止しています。あらかじめご了承ください。<\/p>"
-      }
-    },
     "48f2bf53-e109-43b0-8c0b-f6c564a32085": {
       "type": "collection-brandlist",
       "blocks": {
@@ -198,6 +185,19 @@
         "image_padding": false,
         "show_view_all": false
       }
+    },
+    "a4e22208-d3be-4bf1-b698-0b9ce780e774": {
+      "type": "information",
+      "settings": {
+        "heading": "INFORMATION",
+        "subheading": "お知らせ",
+        "text_1": "クーポン配布中",
+        "subtext_1": "<p>当オンラインショップでは定期的にクーポンを配布しています。クーポンは、当ショップの公式LINEにお友達登録をするとゲットできます。<\/p>",
+        "image_1": "shopify:\/\/shop_images\/banner_line.jpg",
+        "link_1": "https:\/\/line.me\/R\/ti\/p\/@381ufmhm",
+        "text_2": "発送業務について",
+        "subtext_2": "<p>クリニック休診日の水曜日、日曜日は発送業務を停止しています。あらかじめご了承ください。<\/p>"
+      }
     }
   },
   "order": [
@@ -205,7 +205,7 @@
     "168f0e0f-d8eb-4fd4-a6dc-03c266b7ef47",
     "77d949fd-2acd-4cec-b7ef-161adedc495d",
     "5c52ae51-ea07-433b-a2a7-e078e3627821",
-    "a4e22208-d3be-4bf1-b698-0b9ce780e774",
-    "48f2bf53-e109-43b0-8c0b-f6c564a32085"
+    "48f2bf53-e109-43b0-8c0b-f6c564a32085",
+    "a4e22208-d3be-4bf1-b698-0b9ce780e774"
   ]
 }

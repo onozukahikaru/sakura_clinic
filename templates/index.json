@@ -62,7 +62,7 @@
       "settings": {
         "title": "NEW ITEMS",
         "subtitle": "新商品",
-        "collection": "新着商品",
+        "collection": "エムディア",
         "products_to_show": 12,
         "show_view_all": true,
         "swipe_on_mobile": false,

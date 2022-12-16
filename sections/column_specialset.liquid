@@ -21,12 +21,14 @@
 
 <div class="isolate">
   <div class="page-width{% if section.settings.heading == blank %} no-heading{% endif %} section-{{ section.id }}-padding">
-    <div>
-      <div class="information__description">{{ section.settings.subtitle }}</div>
+    <div class="information__leftbox">
+      <div class="information__subtitle">{{ section.settings.subtitle }}</div>
       <h2 class="collage-wrapper-title {{ section.settings.heading_size }} title">{{ section.settings.heading | escape }}</h2>
       <div class="information__description {{ section.settings.description_style }}">{{ section.settings.description }}</div>
       <div class="collection-list-view-all only_pc">
-        <a href="{{ routes.collections_url }}" class="button" id="ViewAllButton-{{ section.id }}" aria-labelledby="ViewAllButton-{{ section.id }} SectionHeading-{{ section.id }}">VIEW ALL</a>
+        <a href="{{ routes.collections_url }}" class="button btn_hover" id="ViewAllButton-{{ section.id }}" aria-labelledby="ViewAllButton-{{ section.id }} SectionHeading-{{ section.id }}">
+          <span>VIEW ALL</span>
+        </a>
       </div>
     </div>
     <div class="collage{% if section.settings.mobile_layout == 'collage' %} collage--mobile{% endif %}">
@@ -110,7 +112,9 @@
       {%- endfor -%}
     </div>
     <div class="collection-list-view-all only_sp">
-      <a href="{{ routes.collections_url }}" class="button" id="ViewAllButton-{{ section.id }}" aria-labelledby="ViewAllButton-{{ section.id }} SectionHeading-{{ section.id }}">VIEW ALL</a>
+      <a href="{{ routes.collections_url }}" class="button btn_hover" id="ViewAllButton-{{ section.id }}" aria-labelledby="ViewAllButton-{{ section.id }} SectionHeading-{{ section.id }}">
+        <span>VIEW ALL</span>
+      </a>
     </div>
   </div>
 </div>

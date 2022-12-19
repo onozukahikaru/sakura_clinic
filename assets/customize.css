@@ -212,6 +212,7 @@ header .header__icon--cart .icon{
 /* footer */
 footer.footer{
   background: #6D7083;
+  margin-top: 5rem;
 }
 footer .smoothscroll-top{
   max-width: 40px;
@@ -333,6 +334,9 @@ footer.footer .list-social__link{
   footer .smoothscroll-top .icon-pagetop{
     width: 50px;
     height: auto;
+  }
+  footer.footer{
+    margin-top: 7rem;
   }
   footer.footer .footer__content-top{
     display: flex;
@@ -834,6 +838,7 @@ footer.footer .list-social__link{
   .section_info .rich-text__blocks{
     max-width: 46.8%;
     position: relative;
+    border-bottom: none;
   }
   .section_info .rich-text__blocks::after{
     content: '';
@@ -1095,5 +1100,20 @@ h2.product-recommendations__heading span{
   }
   h2.product-recommendations__heading span{
     font-size: 1.6rem;
+  }
+}
+
+
+/*下層ページ*/
+h1.main-page-title{
+  font-size: 2.8rem;
+}
+.contact__button .button{
+  width: 100%;
+}
+
+@media screen and (min-width: 769px){
+  h1.main-page-title{
+    font-size: 3.6rem;
   }
 }

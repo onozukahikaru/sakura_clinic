@@ -63,7 +63,7 @@
             <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-caret' %}</button>
             <div class="slider-counter caption">
               <span class="slider-counter--current">1</span>
-              <span aria-hidden="true"> / </span>
+              <span aria-hidden="true"> | </span>
               <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
               <span class="slider-counter--total">{{ media_count }}</span>
             </div>
@@ -191,14 +191,14 @@
               {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
             </div>
             {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
-              <div class="product__tax caption rte">
+              {% comment %} <div class="product__tax caption rte">
                 {%- if shop.taxes_included -%}
                   {{ 'products.product.include_taxes' | t }}
                 {%- endif -%}
                 {%- if shop.shipping_policy.body != blank -%}
                   {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
                 {%- endif -%}
-              </div>
+              </div> {% endcomment %}
             {%- endif -%}
             <div {{ block.shopify_attributes }}>
               {%- form 'product', product, id: 'product-form-installment', class: 'installment caption-large' -%}
@@ -397,6 +397,7 @@
                       class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
                     {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                     >
+                      {% render 'icon-cart' %}
                         <span>
                           {%- if product.selected_or_first_available_variant.available -%}
                             {{ 'products.product.add_to_cart' | t }}

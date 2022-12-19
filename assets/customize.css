@@ -522,6 +522,7 @@ footer.footer .list-social__link{
 }
 .card-information__wrapper > .price{
   font-family: dnp-shuei-gothic-gin-std, sans-serif;
+  font-weight: 600;
 }
 .price.price--on-sale .price__sale{
   flex-direction: column;
@@ -850,5 +851,209 @@ footer.footer .list-social__link{
   .section_info .img_info{
     display: block;
     max-width: 330px;
+  }
+}
+
+
+/* 商品一覧 */
+.pagination__list{
+  position: relative;
+  padding-top: 80px;
+}
+.pagination__list .page__prev{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.pagination__list .page__next{
+  position: absolute;
+  top: 0;
+  right: 95px;
+}
+.pagination .pagination__item::after{
+  content: '';
+  display: block;
+  width: 47px;
+  height: 47px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  border: 1px solid #EDEDED;
+  border-radius: 40px;
+}
+.pagination .pagination__item--current::after, 
+.pagination .pagination__item:hover::after{
+  content: '';
+  display: block;
+  width: 47px;
+  height: 47px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 40px;
+}
+.page__prev .pagination__item,
+.page__next .pagination__item{
+  background: black;
+  color: white;
+  font-size: 1.2rem;
+  width: 138px;
+  height: 48px;
+  border-radius: 0;
+  justify-content: flex-end;
+}
+.page__prev .pagination__item:hover,
+.page__next .pagination__item:hover{
+  opacity: 0.6;
+}
+.page__next .pagination__item{
+  justify-content: flex-start;
+}
+.page__prev .pagination__item::after{
+  content: '';
+  background: white;
+  border-radius: 0;
+  border: 0;
+  width: 16px;
+  height: 1px;
+  bottom: 50%;
+  left: 20px;
+  transform: translateX(-50%);
+}
+.page__next .pagination__item::after{
+  content: '';
+  background: white;
+  border-radius: 0;
+  border: 0;
+  width: 16px;
+  height: 1px;
+  bottom: 50%;
+  left: 0;
+  transform: translateX(-50%);
+}
+.page__next .pagination__item::after{
+  left: auto;
+  right: 0;
+}
+.page__prev .pagination__item span{
+  padding-right: 2rem;
+}
+.page__next .pagination__item span{
+  padding-left: 2rem;
+}
+.page__prev .pagination__item:hover::after{
+  content: '';
+  background: white;
+  border-radius: 0;
+  width: 16px;
+  height: 1px;
+  bottom: 50%;
+  left: 20px;
+  border: 0;
+}
+.page__next .pagination__item:hover::after{
+  content: '';
+  background: white;
+  border-radius: 0;
+  width: 16px;
+  height: 1px;
+  bottom: 50%;
+  left: auto;
+  right: 0;
+  border: 0;
+}
+.card-wrapper .card--outline:not(.card--soft){
+  border: 1px solid #EBEBEB;
+}
+@media screen and (min-width: 769px){
+  .pagination__list{
+    padding-top: 0;
+  }
+  .facets-container .facets__form{
+    display: flex;
+    justify-content: space-between;
+  }
+  .facets-container .facets__form .facet-filters{
+    padding-left: 0;
+  }
+}
+
+
+/* 商品詳細 */
+.product .product__title{
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+.product .price{
+  font-family: dnp-shuei-gothic-gin-std, sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+}
+.product .product-form__submit{
+  background: black;
+  color: white;
+  font-size: 1.4rem;
+  padding: 1rem 3rem 1rem;
+}
+.product-form__submit .icon-cart{
+  max-width: 16px;
+  margin-right: 6px;
+}
+.product-form__submit .icon-cart path,
+.product-form__submit .icon-cart ellipse{
+  stroke: white;
+}
+.product__media-toggle {
+  display: none !important;
+}
+.product__modal-opener .product__media-icon {
+  display: none !important;
+}
+.slider-counter{
+  font-size: 1.4rem;
+}
+.slider-counter span{
+  margin: 1rem;
+}
+.product .slider-buttons .icon {
+  height: 2rem;
+  width: 1.4rem;
+}
+.product .slider-buttons .icon path{
+  fill: black;
+}
+h2.product-recommendations__heading{
+  font-size: 2.8rem;
+  display: flex;
+  align-items: center;
+}
+h2.product-recommendations__heading span{
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #969696;
+  margin-left: 1.5rem;
+}
+.section_recommend{
+  border-top: 1px solid #D1D1D1;
+  padding-top: 4rem;
+}
+@media screen and (min-width: 769px){
+  .product .product__title{
+    font-size: 2.4rem;
+  }
+  .product .product-form__submit{
+    font-size: 1.6rem;
+    padding: 2.2rem 3rem 2.2rem;
+  }
+  h2.product-recommendations__heading{
+    font-size: 3rem;
+  }
+  h2.product-recommendations__heading span{
+    font-size: 1.6rem;
   }
 }

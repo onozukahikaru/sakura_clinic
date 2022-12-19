@@ -28,6 +28,10 @@ img{
   width: 100%;
   height: auto;
 }
+.grid__item .media > img{
+  object-fit: contain;
+  background: white;
+}
 .only_pc{
   display: none!important;
 }
@@ -1116,4 +1120,11 @@ h1.main-page-title{
   h1.main-page-title{
     font-size: 3.6rem;
   }
+}
+
+
+/* review */
+.spr-form input{
+  min-height: 4rem;
+  min-width: calc(7rem + (var(--inputs-border-width) * 2));
 }

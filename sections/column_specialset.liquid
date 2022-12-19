@@ -46,7 +46,7 @@
                         <span class="price">{% render 'price', product: block.settings.product %}</span>
                       </div>
                       
-                      <div class="collage-card__image-wrapper media media--transparent media--hover-effect">
+                      <div class="collage-card__image-wrapper media media--transparent">
                         <img
                           srcset="{%- if featured_media.width >= 550 -%}{{ featured_media | img_url: '550x' }} 550w,{%- endif -%}
                             {%- if featured_media.width >= 720 -%}{{ featured_media | img_url: '720x' }} 720w,{%- endif -%}

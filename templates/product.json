@@ -56,8 +56,8 @@
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
-        "heading": "You may also like",
-        "image_ratio": "adapt",
+        "heading": "RECOMMEND",
+        "image_ratio": "square",
         "show_secondary_image": false,
         "add_image_padding": false,
         "show_image_outline": true,

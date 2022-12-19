@@ -68,8 +68,8 @@
         <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-caret' %}</button>
       </div>
     {%- endif -%}
+    <div class="swiper-pagination"></div>
   </div>
-  <div class="swiper-pagination"></div>
   <div class="swiper-button-prev slider-button n-prev"><img src="{{ 'btn_swiper.png' | asset_img_url: '100x' }}" alt="スワイプボタン"></div>
   <div class="swiper-button-next slider-button n-next"><img src="{{ 'btn_swiper.png' | asset_img_url: '100x' }}" alt="スワイプボタン"></div>  
 {%- if section.settings.show_view_all and more_in_collection -%}

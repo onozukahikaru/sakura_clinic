@@ -176,6 +176,7 @@ header .header__icon--cart .icon{
 @media screen and (min-width: 769px){
   header.header.page-width{
     padding: 0;
+    padding-top: 2rem;
   }
   header .list-menu__item{
     font-size: 1.6rem;
@@ -430,6 +431,11 @@ footer.footer .list-social__link{
   .section_mainvisual .page-width{
     padding: 0;
   }
+  .section_mainvisual .swiper-pagination-bullet{
+    width: 9px;
+    height: 9px;
+    margin: 0 7px!important;
+  }
 }
 
 /* コレクション */
@@ -618,6 +624,11 @@ footer.footer .list-social__link{
   .section_newitems .swiper-button-next{
     right: 6rem;
   }
+  .section_newitems .swiper-pagination-bullet{
+    width: 9px;
+    height: 9px;
+    margin: 0 7px!important;
+  }
 }
 
 /* Best Seller */
@@ -643,6 +654,9 @@ footer.footer .list-social__link{
   }
   .section_bestseller .product-grid .grid__item:nth-child(5){
     display: none;
+  }
+  .section_bestseller.shopify-section.spaced-section{
+    margin-top: 2rem;
   }
 }
 
@@ -690,6 +704,9 @@ footer.footer .list-social__link{
   }
   .section_brandlist .card__text h3{
     font-size: 1.4rem;
+  }
+  .section_brandlist .title-wrapper-with-link{
+    margin: 0 0 3rem;
   }
 }
 

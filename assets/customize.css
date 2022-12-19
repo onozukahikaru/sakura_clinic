@@ -858,17 +858,23 @@ footer.footer .list-social__link{
 /* 商品一覧 */
 .pagination__list{
   position: relative;
-  padding-top: 80px;
+  padding-bottom: 80px;
 }
 .pagination__list .page__prev{
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 0;
+  left: 14%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
 }
 .pagination__list .page__next{
   position: absolute;
-  top: 0;
-  right: 95px;
+  bottom: 0;
+  right: 28%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
 }
 .pagination .pagination__item::after{
   content: '';
@@ -970,9 +976,26 @@ footer.footer .list-social__link{
 .card-wrapper .card--outline:not(.card--soft){
   border: 1px solid #EBEBEB;
 }
+.select .icon-caret path{
+  fill: #969696;
+}
 @media screen and (min-width: 769px){
   .pagination__list{
-    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .pagination__list .page__prev{
+    left: 0;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+  }
+  .pagination__list .page__next{
+    position: absolute;
+    bottom: 0;
+    right: 95px;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
   }
   .facets-container .facets__form{
     display: flex;
@@ -1041,6 +1064,23 @@ h2.product-recommendations__heading span{
 .section_recommend{
   border-top: 1px solid #D1D1D1;
   padding-top: 4rem;
+}
+.product .price .badge{
+  display: none;
+}
+.badge.slider_top{
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 0;
+}
+.product .soldout{
+  color: #EB0B61;
+  border: none;
+  padding-left: 0;
+  font-size: 1.6rem;
 }
 @media screen and (min-width: 769px){
   .product .product__title{

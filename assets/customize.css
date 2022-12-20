@@ -15,6 +15,9 @@ body.homepage{
 h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5{
   font-family: 'Montserrat', "Helvetica Neue", YuGothic, dnp-shuei-gothic-gin-std, sans-serif;
 }
+p{
+  line-height: 1.5em;
+}
 .icon.icon-close{
   fill: black;
 }
@@ -416,6 +419,7 @@ footer.footer .list-social__link{
 }
 .section_mainvisual .swiper-pagination{
   position: inherit;
+  margin-top: 1.5rem;
 }
 @media screen and (max-width: 768px){
   .section_mainvisual.shopify-section .page-width{
@@ -439,7 +443,7 @@ footer.footer .list-social__link{
 }
 
 /* コレクション */
-.shopify-section.spaced-section{
+.homepage .shopify-section.spaced-section{
   margin-top: 4rem;
 }
 .shopify-section h2.title{
@@ -547,7 +551,7 @@ footer.footer .list-social__link{
   }
 }
 @media screen and (min-width: 769px){
-  .shopify-section.spaced-section{
+  .homepage .shopify-section.spaced-section{
     margin-top: 7rem;
   }
   .shopify-section h2.title{
@@ -611,18 +615,20 @@ footer.footer .list-social__link{
 }
 @media screen and (min-width: 769px){
   .n-swiper .swiper-slide{
-    max-width: 22.5%;
+    max-width: 21.7%;
+    padding-left: 0;
+    margin-right: 43px!important;
   }
   .section_newitems .slider-button{
-    top: 44%;
+    top: 42%;
     width: 60px;
     height: 60px;
   }
   .section_newitems .swiper-button-prev{
-    left: 6rem;
+    left: 7rem;
   }
   .section_newitems .swiper-button-next{
-    right: 6rem;
+    right: 7rem;
   }
   .section_newitems .swiper-pagination-bullet{
     width: 9px;
@@ -738,6 +744,7 @@ footer.footer .list-social__link{
 }
 .information__leftbox{
   text-align: center;
+  line-height: 1.5em;
 }
 .section_specialset.shopify-section h2.title{
   justify-content: center;
@@ -746,13 +753,15 @@ footer.footer .list-social__link{
   font-size: 1.4rem;
   font-weight: 600;
   color: #EB0B61;
+  margin-bottom: 1rem;
 }
 .information__description {
   margin-bottom: 3rem;
 }
-.information__description  p{
+.information__description p{
   font-size: 1.6rem;
   color: black;
+  line-height: 1.5em;
 }
 .section_specialset .collection-list-view-all{
   text-align: center;
@@ -796,6 +805,7 @@ footer.footer .list-social__link{
   }
   .section_specialset.shopify-section h2.title{
     justify-content: flex-start;
+    margin-top: 0;
   }
   .information__subtitle p{
     font-size: 1.6rem;
@@ -838,6 +848,7 @@ footer.footer .list-social__link{
 }
 .section_info .rich-text__text{
   font-size: 1.4rem;
+  line-height: 1.5em;
 }
 .section_info .rich-text__text a{
   color: #48C0D0;
@@ -1005,6 +1016,11 @@ footer.footer .list-social__link{
 .select .icon-caret path{
   fill: #969696;
 }
+@media screen and (max-width: 768px){
+  .facets-container{
+    margin-bottom: 2rem;
+  }
+}
 @media screen and (min-width: 769px){
   .pagination__list{
     padding-bottom: 0;
@@ -1026,6 +1042,7 @@ footer.footer .list-social__link{
   .facets-container .facets__form{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 4rem;
   }
   .facets-container .facets__form .facet-filters{
     padding-left: 0;
@@ -1132,7 +1149,9 @@ h1.main-page-title{
 .contact__button .button{
   width: 100%;
 }
-
+.spr-form{
+  display: block!important;
+}
 @media screen and (min-width: 769px){
   h1.main-page-title{
     font-size: 3.6rem;
@@ -1144,4 +1163,14 @@ h1.main-page-title{
 .spr-form input{
   min-height: 4rem;
   min-width: calc(7rem + (var(--inputs-border-width) * 2));
+}
+
+/* 特商法 */
+.c-tbl-list__tr{
+  line-height: 2em;
+  margin-bottom: 2rem;
+}
+.c-tbl-list__th{
+  font-weight: 600;
+  font-size: inherit;
 }

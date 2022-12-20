@@ -14,8 +14,8 @@
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | img_url: '32x32' }}">
     {%- endif -%}
-    <link rel="apple-touch-icon" type="image/png" href="{{ 'appleicon.png' | asset_url: '180x180' }}">
-    <link rel="icon" type="image/png" href="{{ 'appleicon.png' | asset_url: '192x192' }}">
+    <link rel="apple-touch-icon" type="image/png" href="{{ 'appleicon.png' | file_img_url: '180x180' }}">
+    <link rel="icon" type="image/png" href="{{ 'appleicon.png' | file_img_url: '192x192' }}">
 
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
@@ -144,8 +144,12 @@
   {% comment %}Do not edit this line{% endcomment %}
 {% render '_hasigo-pre-order-v0.0.8.liquid', product: product, api_host: 'pre-order.app.growth.ec', assets_host: 'assets-pre-order.app.growth.ec', theme_snippet_version: 'v0.0.8' %}
 </head>
-
+{%- if template == 'index' -%}
+  <body class="gradient homepage">
+{%- else -%}
   <body class="gradient">
+{%- endif -%}
+    <body class="gradient">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a>

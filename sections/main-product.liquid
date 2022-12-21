@@ -220,6 +220,8 @@
             </div>
           {%- when 'description' -%}
             {%- if product.description != blank -%}
+              <a class="product__linkreview" href="#shopify-product-reviews"><span>{% render 'icon-arrow-down' %}</span>商品レビュー</a>
+
               <div class="product__description rte">
                 {{ product.description }}
               </div>

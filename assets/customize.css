@@ -1159,10 +1159,6 @@ h2.product-recommendations__heading span{
   border-top: 1px solid #D1D1D1;
   padding-top: 4rem;
 }
-.section_recommend .product-recommendations .grid {
-  flex-wrap: nowrap;
-  overflow-x: scroll;
-}
 .product .price .badge{
   display: none;
 }
@@ -1180,7 +1176,12 @@ h2.product-recommendations__heading span{
   padding-left: 0;
   font-size: 1.6rem;
 }
-
+@media screen and (max-width: 769px){
+  .section_recommend .product-recommendations .grid {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+}
 @media screen and (min-width: 769px){
   .product .product__title{
     font-size: 2.4rem;
@@ -1188,6 +1189,9 @@ h2.product-recommendations__heading span{
   .product .product-form__submit{
     font-size: 1.6rem;
     padding: 2.2rem 3rem 2.2rem;
+  }
+  .section_recommend{
+    padding-top: 7rem;
   }
   h2.product-recommendations__heading{
     font-size: 3rem;
@@ -1205,9 +1209,6 @@ h1.main-page-title{
 .contact__button .button{
   width: 100%;
 }
-.spr-form{
-  display: block!important;
-}
 @media screen and (min-width: 769px){
   h1.main-page-title{
     font-size: 3.6rem;
@@ -1223,6 +1224,7 @@ h1.main-page-title{
 .spr-form input{
   min-height: 4rem;
   min-width: calc(7rem + (var(--inputs-border-width) * 2));
+  width: 100%;
 }
 h2.spr-header-title{
   position: relative;
@@ -1235,9 +1237,67 @@ h2.spr-header-title::after{
   color: #969696;
   margin-left: 1rem;
 }
+.spr-summary{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.spr-summary .spr-summary-actions a{
+  font-size: 15px;
+  font-weight: 600;
+}
+.spr-summary .spr-summary-actions-newreview::before{
+  content: '';
+  background: url(../assets/icon-pen.png);
+  background-size: contain;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin-right: 6px;
+}
+.spr-summary-caption{
+  margin-bottom: 6rem;
+}
+.product__linkreview{
+  font-size: 15px;
+  text-decoration: underline;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+.product__linkreview span{
+  margin-right: 6px;
+}
+.spr-form-title{
+  display: none;
+}
+.spr-button{
+  max-width: 450px;
+  padding: 2rem 3rem 2rem;
+  margin: auto;
+}
 @media screen and (min-width: 769px){
   h2.spr-header-title::after{
     font-size: 1.6rem;
+  }
+  .spr-form{
+    display: block!important;
+  }
+  .spr-summary-actions{
+    display: none;
+  }
+  .spr-form-title{
+    display: block;
+  }
+  .spr-form-title::before{
+    content: '';
+    background: url(../assets/icon-pen.png);
+    background-size: contain;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 6px;
   }
 }
 
@@ -1252,7 +1312,27 @@ h2.spr-header-title::after{
 }
 
 /* login */
+.customer.login button,
 #customer_login button,
 #create_customer button{
   width: 100%;
+}
+
+/* search */
+input.search__input:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+input.search__input:focus::-moz-placeholder {
+	color: transparent;
+}
+input.search__input:focus::-ms-input-placeholder {
+	color: transparent;
+}
+input.search__input:focus::placeholder {
+	color: transparent;
+}
+@media screen and (max-width: 768px){
+  .search-modal.modal__content{
+    height: 150px;
+  }
 }

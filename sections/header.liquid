@@ -371,7 +371,7 @@
                 <details-disclosure>
                   <details id="Details-HeaderMenu-{{ forloop.index }}">
                     <summary class="header__menu-item list-menu__item link focus-inset">
-                      <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+                      <span>{{ link.title | escape }}</span>
                       {% render 'icon-caret' %}
                     </summary>
                     <script>
@@ -415,7 +415,7 @@
                 </details-disclosure>
               {%- else -%}
                 <a href="{{ link.url }}" class="header__menu-item header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
-                  <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+                  <span>{{ link.title | escape }}</span>
                 </a>
               {%- endif -%}
             </li>

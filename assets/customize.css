@@ -1073,6 +1073,16 @@ footer.footer .list-social__link{
 .select .icon-caret path{
   fill: #969696;
 }
+.collectionpage .collection-hero__title{
+  display: flex;
+  align-items: center;
+}
+.collectionpage .collection-hero__title::after{
+  content: '商品一覧';
+  font-size: 1.4rem;
+  color: #969696;
+  margin-left: 1.5rem;
+}
 @media screen and (max-width: 768px){
   .facets-container{
     margin-bottom: 2rem;
@@ -1106,6 +1116,13 @@ footer.footer .list-social__link{
   }
   .card-wrapper .card--outline:not(.card--soft){
     margin-bottom: 1.6rem;
+  }
+  .collectionpage .collection-hero__title::after{
+    font-size: 1.6rem;
+    margin-left: 2rem;
+  }
+  .collectionpage .grid__item{
+    padding-left: 4rem;
   }
 }
 

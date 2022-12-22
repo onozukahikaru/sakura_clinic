@@ -62,7 +62,7 @@
       "settings": {
         "title": "NEW ITEMS",
         "subtitle": "新商品",
-        "collection": "エムディア",
+        "collection": "新着商品",
         "products_to_show": 12,
         "show_view_all": true,
         "swipe_on_mobile": false,
@@ -79,7 +79,7 @@
       "settings": {
         "title": "BEST SELLER",
         "subtitle": "ベストセラー",
-        "collection": "全て表示",
+        "collection": "ベストセラー",
         "products_to_show": 5,
         "show_view_all": true,
         "swipe_on_mobile": false,

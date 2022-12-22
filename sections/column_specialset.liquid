@@ -37,6 +37,7 @@
           {%- case block.type -%}
             {%- when 'product' -%}
               <div class="collage-card collage-product card-wrapper">
+                <a href="{{ block.settings.product.url }}" class="full-unstyled-link">
                 {%- if block.settings.product != blank -%}
                   {%- assign featured_media = block.settings.product.selected_or_first_available_variant.featured_media | default: block.settings.product.featured_media -%}
                   <div class="collage-content card{% if block.settings.secondary_background %} card-colored color-background-1{% endif %}{% if block.settings.image_padding %} collage-card-spacing{% endif %}" {{ block.shopify_attributes }}>
@@ -76,7 +77,7 @@
                       </div>
                     {%- else -%}
                       <div class="collage-card__no-image card-colored color-background-1 card__text-spacing center">
-                        <h3 class="h2"><a href="{{ block.settings.product.url }}" class="full-unstyled-link">{{ block.settings.product.title | escape }}</a></h3>
+                        <h3 class="h2">{{ block.settings.product.title | escape }}</h3>
                       </div>
                       <div class="collage-product__badge">
                         <div class="card__badge">
@@ -106,6 +107,7 @@
                     </div>
                   </div>
                 {%- endif -%}
+              </a>
               </div>
           {%- endcase -%}
         </div>

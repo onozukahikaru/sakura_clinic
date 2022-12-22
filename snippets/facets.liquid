@@ -254,7 +254,6 @@
     <details class="mobile-facets__disclosure disclosure-has-popup">
       <summary class="mobile-facets__open-wrapper focus-offset">
         <span class="mobile-facets__open">
-          {% render 'icon-filter' %}
           <span class="mobile-facets__open-label button-label">
             {%- if enable_filtering and enable_sorting -%}
               {{ 'products.facets.filter_and_sort' | t }}
@@ -264,6 +263,7 @@
               {{ 'products.facets.sort_button' | t }}
             {%- endif -%}
           </span>
+          {% render 'icon-caret' %}
         </span>
         <span tabindex="0" class="mobile-facets__close mobile-facets__close--no-js">{%- render 'icon-close' -%}</span>
       </summary>
@@ -296,7 +296,7 @@
               {%- for filter in results.filters -%}
                 {% case filter.type %}
                 {% when 'list' %}
-                  <details id="Details-Mobile-{{ forloop.index }}-{{ section.id }}" class="mobile-facets__details js-filter" data-index="mobile-{{ forloop.index }}">
+                  {% comment %} <details id="Details-Mobile-{{ forloop.index }}-{{ section.id }}" class="mobile-facets__details js-filter" data-index="mobile-{{ forloop.index }}">
                     <summary class="mobile-facets__summary focus-inset">
                       <div>
                         <span>{{ filter.label | escape }}</span>                        
@@ -342,9 +342,9 @@
                         <noscript><button class="button button--primary">{{ 'products.facets.apply' | t }}</button></noscript>
                       </div>
                     </div>
-                  </details>
+                  </details> {% endcomment %}
                 {% when 'price_range' %}
-                  <details id="Details-Mobile-{{ forloop.index }}-{{ section.id }}" class="mobile-facets__details js-filter" data-index="mobile-{{ forloop.index }}">
+                  {% comment %} <details id="Details-Mobile-{{ forloop.index }}-{{ section.id }}" class="mobile-facets__details js-filter" data-index="mobile-{{ forloop.index }}">
                     <summary class="mobile-facets__summary focus-inset">
                       <div>
                         <span>{{ filter.label | escape }}</span>
@@ -408,7 +408,7 @@
                         <noscript><button class="button button--primary">{{ 'products.facets.apply' | t }}</button></noscript>
                       </div>
                     </div>
-                  </details>
+                  </details> {% endcomment %}
                 {% endcase %}
               {%- endfor -%}
 

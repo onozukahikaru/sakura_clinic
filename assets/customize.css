@@ -202,7 +202,7 @@ header .header__icon--cart .icon{
   header .header__inline-menu{
     width: 100%;
   }
-  header .header__inline-menu ul li{
+  header .header__inline-menu > ul > li{
     margin-right: 5rem;
   }
   header .header__inline-menu ul li:last-child{
@@ -1223,6 +1223,9 @@ h2.product-recommendations__heading span{
     display: flex;
     justify-content: center;
   }
+  .product.product--medium .thumbnail-list{
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 
@@ -1232,6 +1235,15 @@ h1.main-page-title{
 }
 .contact__button .button{
   width: 100%;
+}
+.mobile-facets__summary .mobile-facets__sort .select{
+  width: 100%;
+}
+.mobile-facets__open svg{
+  right: -3rem;
+}
+.mobile-facets__open svg path{
+  fill: #969696;
 }
 @media screen and (min-width: 769px){
   h1.main-page-title{

@@ -1121,6 +1121,9 @@ footer.footer .list-social__link{
     font-size: 1.6rem;
     margin-left: 2rem;
   }
+  .collectionpage #product-grid {
+    margin-left: -4rem;
+  }
   .collectionpage .grid__item{
     padding-left: 4rem;
   }
@@ -1214,6 +1217,7 @@ h2.product-recommendations__heading span{
   }
   .section_recommend .product-recommendations .product-grid .grid__item{
     max-width: 140px;
+    padding-left: 1.2rem;
   }
   .product-section.spaced-section{
     margin-top: 5rem;
@@ -1252,6 +1256,12 @@ h2.product-recommendations__heading span{
   .product.product--medium .thumbnail-list{
     grid-template-columns: repeat(2, 1fr);
   }
+  .section_recommend .grid {
+    margin-left: -4rem;
+  }
+  .section_recommend .grid__item {
+    padding-left: 4rem;
+  }
 }
 
 
@@ -1270,6 +1280,12 @@ h1.main-page-title{
 }
 .mobile-facets__open svg path{
   fill: #969696;
+}
+.cart-items thead th{
+  font-size: 1.4rem;
+}
+.cart__ctas button{
+  padding: 1.7rem 3rem 1.7rem;
 }
 @media screen and (min-width: 769px){
   h1.main-page-title{
@@ -1319,12 +1335,13 @@ h2.spr-header-title::after{
 .spr-summary .spr-summary-actions a{
   font-size: 15px;
   font-weight: 600;
-  background: url(../assets/icon-plus.png);
-  background-size: 14px;
+  background: url(../assets/btn_arrow.png);
+  background-size: 34px;
   background-repeat: no-repeat;
   background-position-y: center;
   background-position-x: right;
   display: block;
+  padding: 2rem 0;
 }
 .spr-summary .spr-summary-actions-newreview::before{
   content: '';
@@ -1334,9 +1351,6 @@ h2.spr-header-title::after{
   height: 15px;
   display: inline-block;
   margin-right: 6px;
-}
-.spr-summary-caption{
-  margin-bottom: 6rem;
 }
 .product__linkreview{
   font-size: 15px;
@@ -1392,7 +1406,6 @@ h2.spr-header-title::after{
 .spr-summary-actions{
   position: relative;
   width: 100%;
-  padding-bottom: 2rem;
   text-align: left;
 }
 .spr-summary-actions::before{
@@ -1417,6 +1430,18 @@ h2.spr-header-title::after{
 .spr-summary-actions-togglereviews{
   display: block;
   margin-top: 1rem;
+}
+#shopify-product-reviews .spr-review-header-byline{
+  display: flex;
+  justify-content: space-between;
+  font-style: inherit;
+  color: black;
+  margin: 1rem 0 1.5em 0;
+}
+@media screen and (max-width: 768px){
+  .spr-summary-caption{
+    margin-bottom: 4rem;
+  }
 }
 @media screen and (min-width: 769px){
   h2.spr-header-title{
@@ -1469,6 +1494,16 @@ h2.spr-header-title::after{
 #customer_login button,
 #create_customer button{
   width: 100%;
+}
+.customer .btn_account_logout{
+  margin: 5rem auto 2rem;
+  display: block;
+  text-align: center;
+}
+@media screen and (min-width: 769px){
+  .customer .btn_account_logout{
+    margin: 7rem auto 2rem;
+  }
 }
 
 /* search */

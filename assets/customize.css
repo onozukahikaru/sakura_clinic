@@ -161,9 +161,11 @@ header .header__icon--cart .icon{
   border-left: none!important;
 }
 @media screen and (max-width: 768px){
-  header.header{
+  header.header.page-width{
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 1.5rem;
   }
   header.header .header__heading-link{
     max-width: 150px;

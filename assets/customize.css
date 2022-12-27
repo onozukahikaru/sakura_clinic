@@ -1270,6 +1270,15 @@ h2.product-recommendations__heading span{
 .product__description p{
   line-height: 1.6em;
 }
+.product-section .quantity{
+  border-color: #BCBCBC;
+  height: 50px;
+  width: 150px;
+}
+.product-form__input.product-form__quantity{
+  margin-top: 3rem;
+  margin-bottom: -1.2rem;
+}
 @media screen and (max-width: 769px){
   .section_recommend .product-recommendations .grid {
     flex-wrap: nowrap;
@@ -1321,6 +1330,19 @@ h2.product-recommendations__heading span{
   }
   .section_recommend .grid__item {
     padding-left: 4rem;
+  }
+  .product-section .product--medium:not(.product--no-media) .product__media-wrapper,
+  .product-section .product--small:not(.product--no-media) .product__info-wrapper,
+  .product-section .product--medium:not(.product--no-media) .product__info-wrapper,
+  .product-section .product--small:not(.product--no-media) .product__media-wrapper{
+    max-width: 50%;
+    width: calc(50% - 1rem / 2);
+  }
+  .product-section .product-form__submit{
+    margin-bottom: 1.2rem;
+  }
+  .product-section .quantity{
+    height: 55px;
   }
 }
 

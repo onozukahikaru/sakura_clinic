@@ -124,6 +124,10 @@ header .header__icon--cart .icon{
 .icon-account path{
   fill: black;
 }
+header.header__icon--menu .icon{
+  height: 3rem;
+  width: 2.5rem;
+}
 #menu-drawer .menu-drawer__account{
   background: #EAEAEA;
   border-radius: 4px;
@@ -624,7 +628,7 @@ footer.footer .list-social__link{
   margin-top: 2rem;
 }
 .section_newitems .slider-button{
-  top: 35%;
+  top: 34%;
   width: 36px;
   height: 36px;
   z-index: 1;
@@ -644,6 +648,11 @@ footer.footer .list-social__link{
 }
 .section_newitems .swiper-button-next{
   right: 0;
+}
+.n-swiper .swiper-slide{
+  max-width: 31.8%;
+  padding-left: 0;
+  margin-right: 8px!important;
 }
 @media screen and (min-width: 769px){
   .n-swiper .swiper-slide{
@@ -729,6 +738,12 @@ footer.footer .list-social__link{
   .section_brandlist.collection-list-section .collection-list:not(.slider) {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+  .section_brandlist.collection-list-section .collection-list:not(.slider){
+    margin-left: -1rem;
+  }
+  .section_brandlist .collection-list .collection-list__item{
+    padding-left: 1rem;
   }
 }
 @media screen and (min-width: 769px){

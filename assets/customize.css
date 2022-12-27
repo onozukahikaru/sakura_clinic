@@ -473,6 +473,9 @@ footer.footer .list-social__link{
     height: 9px;
     margin: 0 7px!important;
   }
+  .m-swiper a:hover{
+    opacity: 1;
+  }
 }
 
 /* コレクション */

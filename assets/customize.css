@@ -1324,6 +1324,18 @@ h1.main-page-title{
 .cart__ctas button{
   padding: 1.7rem 3rem 1.7rem;
 }
+p.payment_imgbox{
+  display: flex;
+  align-items: center;
+}
+p.payment_imgbox img{
+  max-width: 50px;
+}
+@media screen and (max-width: 768px){
+  p.payment_imgbox{
+    justify-content: center;
+  }
+}
 @media screen and (min-width: 769px){
   h1.main-page-title{
     font-size: 3.6rem;

@@ -1385,6 +1385,9 @@ p.payment_imgbox img{
   h1.main-page-title{
     font-size: 3.6rem;
   }
+  .pagewidth_100 .page-width--narrow{
+    max-width: 70%;
+  }
 }
 
 

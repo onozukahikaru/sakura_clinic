@@ -149,6 +149,10 @@
   <body class="gradient homepage">
 {%- elsif template == 'collection'-%}
   <body class="gradient collectionpage">
+{%- elsif page.handle == 'privacy'-%}
+  <body class="gradient pagewidth_100">
+{%- elsif page.handle == 'document'-%}
+  <body class="gradient pagewidth_100">
 {%- else -%}
   <body class="gradient">
 {%- endif -%}

@@ -1104,6 +1104,13 @@ footer.footer .list-social__link{
   .facets-container{
     margin-bottom: 2rem;
   }
+  .collectionpage .product-grid.negative-margin{
+    margin-left: -1rem;
+  }
+  .collectionpage .product-grid .grid__item{
+    padding-left: 1rem;
+    padding-bottom: 3rem;
+  }
 }
 @media screen and (min-width: 769px){
   .pagination__list{

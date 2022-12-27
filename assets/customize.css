@@ -1104,10 +1104,12 @@ footer.footer .list-social__link{
   .facets-container{
     margin-bottom: 2rem;
   }
-  .collectionpage .product-grid.negative-margin{
+  .collectionpage .product-grid.negative-margin,
+  .template-search__results .product-grid.negative-margin{
     margin-left: -1rem;
   }
-  .collectionpage .product-grid .grid__item{
+  .collectionpage .product-grid .grid__item,
+  .template-search__results .product-grid .grid__item{
     padding-left: 1rem;
     padding-bottom: 3rem;
   }
@@ -1145,10 +1147,12 @@ footer.footer .list-social__link{
     font-size: 1.6rem;
     margin-left: 2rem;
   }
-  .collectionpage #product-grid {
+  .collectionpage #product-grid,
+  .template-search__results #product-grid{
     margin-left: -4rem;
   }
-  .collectionpage .grid__item{
+  .collectionpage .grid__item,
+  .template-search__results .grid__item{
     padding-left: 4rem;
   }
 }
@@ -1233,6 +1237,9 @@ h2.product-recommendations__heading span{
   background: #004EA2;
   box-shadow: 0 0 0 0.1rem #004ea2;
   padding: 2rem 0;
+}
+.product__description p{
+  line-height: 1.6em;
 }
 @media screen and (max-width: 769px){
   .section_recommend .product-recommendations .grid {

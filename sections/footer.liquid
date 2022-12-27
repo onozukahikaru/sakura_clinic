@@ -56,7 +56,7 @@
                       {%- endfor -%}
                     </ul>
                   {%- endif -%}
-                {%- when 'image' -%}
+                {% comment %} {%- when 'image' -%}
                   <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
                     {%- if block.settings.image != blank -%}
                       {%- assign image_size = block.settings.image_width | append: 'x' -%}
@@ -72,7 +72,7 @@
                     {%- else -%}
                       {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
                     {%- endif -%}
-                  </div>
+                  </div> {% endcomment %}
                 {%- endcase -%}
             </div>
           {%- endfor -%}
@@ -163,11 +163,24 @@
           </ul>
         {%- endif -%}
 
-        <div class="footer__logo">
-          <a href="https://www.sakura-clinic.jp" target="_blank">
-            <img src="{{ 'logo_footer.jpg' | asset_img_url: '600x' }}" alt="咲くらクリニック">
-          </a>
-        </div>
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'image' -%}
+              {%- if block.settings.image != blank -%}
+              <div class="footer__logo">
+                <a href="{{ block.settings.link_url }}" target="_blank">
+                  <img
+                    src="{{ block.settings.image | img_url: '400x' }}"
+                    alt="{{ block.settings.image.alt | escape }}"
+                    loading="lazy"
+                    width="{{ block.settings.image.width }}"
+                    height="{{ block.settings.image.height }}"
+                  >
+                </a>
+              </div>
+              {%- endif -%}
+          {%- endcase -%}
+        {%- endfor -%}
       </div>
       {% render "goto_top" %}
     </div>
@@ -249,34 +262,9 @@
           "label": "Image"
         },
         {
-          "type": "range",
-          "id": "image_width",
-          "min": 50,
-          "max": 200,
-          "step": 5,
-          "unit": "px",
-          "label": "Image width",
-          "default": 100
-        },
-        {
-          "type": "select",
-          "id": "alignment",
-          "label": "Image alignment on large screen",
-          "options": [
-            {
-              "value": "",
-              "label": "Left"
-            },
-            {
-              "value": "center",
-              "label": "Center"
-            },
-            {
-              "value": "right",
-              "label": "Right"
-            }
-          ],
-          "default": "center"
+          "type": "url",
+          "id": "link_url",
+          "label": "バナーのリンク先"
         }
       ]
     }

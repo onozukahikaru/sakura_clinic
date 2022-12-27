@@ -181,7 +181,10 @@ header.header__icon--menu .icon{
     position: fixed;
     width: 100%;
   }
-  
+  .header__icon.header__icon--search > span{
+    width: 3rem;
+    margin-left: auto;
+  }
 }
 
 /* pc menu */

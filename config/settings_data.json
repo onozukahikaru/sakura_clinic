@@ -44,10 +44,18 @@
               "heading": "送料無料",
               "menu": "link-list"
             }
+          },
+          "32c7d1a3-707d-487f-b6b1-f0dc175c1352": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/logo_footer.jpg",
+              "link_url": "https:\/\/www.sakura-clinic.jp"
+            }
           }
         },
         "block_order": [
-          "footer-0"
+          "footer-0",
+          "32c7d1a3-707d-487f-b6b1-f0dc175c1352"
         ],
         "settings": {
           "color_scheme": "background-1",

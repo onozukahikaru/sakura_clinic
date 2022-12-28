@@ -41,7 +41,7 @@
             <input type="text" id="AddressZipNew" name="address[zip]" value="{{ form.zip }}" autocapitalize="characters" autocomplete="postal-code" placeholder="{{ 'customer.addresses.zip' | t }}">
             <label for="AddressZipNew">{{ 'customer.addresses.zip' | t }}</label>
           </div>
-          <div>
+          <div class="address__space">
             <label for="AddressCountryNew">{{ 'customer.addresses.country' | t }}</label>
             <div class="select">
               <select
@@ -57,7 +57,7 @@
               </svg>
             </div>
           </div>
-          <div id="AddressProvinceContainerNew" style="display: none">
+          <div id="AddressProvinceContainerNew" class="address__space" style="display: none">
             <label for="AddressProvinceNew">{{ 'customer.addresses.province' | t }}</label>
             <div class="select">
               <select
@@ -92,7 +92,7 @@
             {{ form.set_as_default_checkbox }}
             <label for="address_default_address_new">{{ 'customer.addresses.set_default' | t }}</label>
           </div>
-          <div>
+          <div class="address__button">
             <button>{{ 'customer.addresses.add' | t }}</button>
             <button type="reset">{{ 'customer.addresses.cancel' | t }}</button>
           </div>
@@ -144,7 +144,7 @@
                 <input type="text" id="AddressZip_{{ form.id }}" name="address[zip]" value="{{ form.zip }}" autocapitalize="characters" autocomplete="postal-code" placeholder="{{ 'customer.addresses.zip' | t }}">
                 <label for="AddressZip_{{ form.id }}">{{ 'customer.addresses.zip' | t }}</label>
               </div>
-              <div>
+              <div class="address__space">
                 <label for="AddressCountry_{{ form.id }}">
                   {{ 'customer.addresses.country' | t }}
                 </label>
@@ -164,7 +164,7 @@
                   </svg>
                 </div>
               </div>
-              <div id="AddressProvinceContainer_{{ form.id }}" style="display:none;">
+              <div id="AddressProvinceContainer_{{ form.id }}" class="address__space" style="display:none;">
                 <label for="AddressProvince_{{ form.id }}">
                   {{ 'customer.addresses.province' | t }}
                 </label>
@@ -203,7 +203,7 @@
                   {{ 'customer.addresses.set_default' | t }}
                 </label>
               </div>
-              <div>
+              <div class="address__button">
                 <button>{{ 'customer.addresses.update' | t }}</button>
                 <button type="reset">{{ 'customer.addresses.cancel' | t }}</button>
               </div>

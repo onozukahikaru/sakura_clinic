@@ -1597,6 +1597,14 @@ h2.spr-header-title::after{
   display: block;
   text-align: center;
 }
+.address__space{
+  margin-top: 2rem;
+}
+@media screen and (max-width: 768px){
+  .address__button button{
+    width: 100%;
+  }
+}
 @media screen and (min-width: 769px){
   .customer .btn_account_logout{
     margin: 7rem auto 2rem;

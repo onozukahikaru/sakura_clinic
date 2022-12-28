@@ -332,7 +332,9 @@ footer.footer .footer__copyright{
 footer.footer .list-social__link{
   padding: 1.3rem 0.5rem;
 }
-
+.copyright__content{
+  font-weight: 100;
+}
 @media screen and (max-width: 768px){
   .homepage footer.footer{
     margin-top: 2rem;
@@ -361,10 +363,24 @@ footer.footer .list-social__link{
   }
   footer.footer .footer-block--newsletter{
     margin-top: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  footer.footer .footer-block--newsletter .list-social{
+    justify-content: center;
   }
   footer.footer .footer__content-bottom{
     border-top: none;
     padding-bottom: 1.8rem;
+  }
+  footer.footer .footer-block__details-content a{
+    display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: 750px) and (max-width: 769px){
+  footer .footer-block__details-content > :first-child .list-menu__item--link{
+    padding-top: 1rem;
   }
 }
 @media screen and (min-width: 769px){
@@ -423,7 +439,6 @@ footer.footer .list-social__link{
   footer.footer .footer-block--newsletter{
     flex-direction: column;
     margin: 0;
-
   }
   footer.footer .list-social{
     max-height: 6rem;
@@ -442,6 +457,10 @@ footer.footer .list-social__link{
     padding-top: 2.2rem;
     padding-bottom: 2.2rem;
     border-top: 1px solid #5F6279;
+  }
+  .footer__content-bottom .footer__content-bottom-wrapper{
+    max-width: 1140px;
+    padding: 0 5rem;
   }
 }
 
@@ -798,6 +817,9 @@ footer.footer .list-social__link{
 .section_specialset .collage-card.collage-product:only-child{
   border: none;
 }
+.section_specialset .collage-card.collage-product:only-child a{
+  position: inherit;
+}
 .section_specialset .btn_hover{
   background: #EB0B61;
 }
@@ -847,9 +869,15 @@ footer.footer .list-social__link{
 .section_specialset .card-wrapper .card-information{
   padding: 1rem 0;
 }
+.section_specialset .collage:not(.collage--mobile) .media > .collage-card__image {
+  position: inherit;
+  object-fit: contain;
+}
+
 @media screen and (max-width: 768px){
   .section_specialset .collage{
     margin-bottom: 1.5rem;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 769px){
@@ -890,6 +918,8 @@ footer.footer .list-social__link{
 .section_info .rich-text {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .section_info .rich-text__blocks{
   margin: 0;

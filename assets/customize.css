@@ -1112,6 +1112,11 @@ footer.footer .list-social__link{
   color: #969696;
   margin-left: 1.5rem;
 }
+.select .facet-filters__sort:focus-visible{
+  outline: none;
+  box-shadow: none;
+  outline-offset: 0;
+}
 @media screen and (max-width: 768px){
   .facets-container{
     margin-bottom: 2rem;
@@ -1128,6 +1133,9 @@ footer.footer .list-social__link{
   #MainContent .pagination-wrapper{
     margin-top: 4rem;
     margin-bottom: -3rem;
+  }
+  .mobile-facets__main .mobile-facets__footer{
+    margin-top: 2rem;
   }
 }
 @media screen and (min-width: 769px){

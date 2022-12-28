@@ -374,7 +374,7 @@ footer.footer .list-social__link{
     right: 5rem;
   }
   footer .smoothscroll-top .icon-pagetop{
-    width: 50px;
+    width: 53px;
     height: auto;
   }
   footer.footer{
@@ -1316,6 +1316,8 @@ h2.product-recommendations__heading span{
   }
   .section_recommend{
     padding-top: 7rem;
+    margin-top: 8rem;
+    margin-bottom: 0!important;
   }
   h2.product-recommendations__heading{
     font-size: 3rem;
@@ -1543,6 +1545,9 @@ h2.spr-header-title::after{
   color: black;
   margin: 1rem 0 1.5em 0;
 }
+.product .product__linkreview{
+  margin-bottom: 4rem;
+}
 @media screen and (max-width: 768px){
   .spr-summary-caption{
     margin-bottom: 4rem;
@@ -1581,6 +1586,12 @@ h2.spr-header-title::after{
   } 
   .product-section #shopify-product-reviews{
     padding-top: 7rem;
+  }
+  .spr-content .spr-form-review-body{
+    margin-bottom: 4rem;
+  }
+  .product .product__linkreview{
+    margin-bottom: 5rem;
   }
 }
 

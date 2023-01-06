@@ -703,7 +703,7 @@ footer.footer .list-social__link{
     margin-right: 43px!important;
   }
   .section_newitems .slider-button{
-    top: 49%;
+    top: 43%;
     width: 60px;
     height: 60px;
   }
@@ -887,7 +887,12 @@ footer.footer .list-social__link{
   position: inherit;
   object-fit: contain;
 }
-
+.section_specialset .price--on-sale .price__sale{
+  flex-direction: column;
+}
+.section_specialset .price.price--on-sale .price-item--regular{
+  font-size: 1.6rem;
+}
 @media screen and (max-width: 768px){
   .section_specialset .collage{
     margin-bottom: 1.5rem;
@@ -1345,6 +1350,12 @@ h2.product-recommendations__heading span{
 .product-form__input.product-form__quantity{
   margin-top: 3rem;
   margin-bottom: -1.2rem;
+}
+.grid__item .price.price--on-sale .price-item--regular{
+  font-size: 1.6rem;
+}
+.grid__item .price--on-sale .price__sale{
+  flex-direction: column;
 }
 @media screen and (max-width: 769px){
   .section_recommend .product-recommendations .grid {

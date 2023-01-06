@@ -615,6 +615,9 @@ footer.footer .list-social__link{
     padding-left: 1rem;
     padding-right: 1rem;
   }
+  .product .price.price--on-sale .price-item--regular{
+    font-size: 2rem;
+  }
 }
 @media screen and (min-width: 769px){
   .homepage .shopify-section.spaced-section{
@@ -894,7 +897,7 @@ footer.footer .list-social__link{
 @media screen and (min-width: 769px){
   .section_specialset{
     padding: 9.5rem 0 9rem;
-    margin-top: 9rem;
+    margin-top: 5rem;
   }
   .section_specialset .collage{
     gap: 4rem;
@@ -1163,6 +1166,12 @@ footer.footer .list-social__link{
   outline: none;
   box-shadow: none;
   outline-offset: 0;
+}
+.collectionpage .price--on-sale .price__sale{
+  flex-direction: column;
+}
+.collectionpage .price.price--on-sale .price-item--regular{
+  font-size: 1.6rem;
 }
 @media screen and (max-width: 768px){
   .facets-container{

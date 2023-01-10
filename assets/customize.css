@@ -514,7 +514,7 @@ footer.footer .list-social__link{
 }
 .shopify-section h2.title span{
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 500;
   color: #969696;
   margin-left: 1.5rem;
 }
@@ -620,6 +620,14 @@ footer.footer .list-social__link{
   .shopify-section .page-width{
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+  .shopify-section .price.price--on-sale .price-item--regular,
+  .shopify-section .card-information__wrapper > .price{
+    font-size: 1.2rem;
+  }
+  .collectionpage .shopify-section .grid__item .price.price--on-sale .price-item--regular,
+  .collectionpage .shopify-section .card-information__wrapper > .price{
+    font-size: 1.5rem;
   }
   .product .price.price--on-sale .price-item--regular{
     font-size: 2rem;
@@ -1166,6 +1174,7 @@ footer.footer .list-social__link{
 .collectionpage .collection-hero__title{
   display: flex;
   align-items: center;
+  font-size: 2.8rem;
 }
 .collectionpage .collection-hero__title::after{
   content: '商品一覧';
@@ -1237,6 +1246,9 @@ footer.footer .list-social__link{
   }
   .card-wrapper .card--outline:not(.card--soft){
     margin-bottom: 1.6rem;
+  }
+  .collectionpage .collection-hero__title{
+    font-size: 3.6rem;
   }
   .collectionpage .collection-hero__title::after{
     font-size: 1.6rem;
@@ -1358,6 +1370,9 @@ h2.product-recommendations__heading span{
   margin-bottom: -1.2rem;
 }
 @media screen and (max-width: 769px){
+  .section_recommend{
+    margin-bottom: 3rem!important;
+  }
   .section_recommend .product-recommendations .grid {
     flex-wrap: nowrap;
     overflow-x: scroll;
@@ -1679,7 +1694,7 @@ h2.c-ttl-main {
   margin-bottom: 1.5rem;
 }
 .p-privacy-box{
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
   margin-bottom: 1.5rem;
 }
 h3.c-ttl-second{

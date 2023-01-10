@@ -6,11 +6,10 @@
       <h1 class="collection-hero__title">
         <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
         {{- collection.title | escape -}}
+        {%- if section.settings.show_collection_description -%}
+          <span class="collection-hero__description rte">{{ collection.description }}</span>
+        {%- endif -%}
       </h1>
-
-      {%- if section.settings.show_collection_description -%}
-        <div class="collection-hero__description rte">{{ collection.description }}</div>
-      {%- endif -%}
     </div>
 
     {%- if section.settings.show_collection_image and collection.image -%}

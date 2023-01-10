@@ -1176,8 +1176,7 @@ footer.footer .list-social__link{
   align-items: center;
   font-size: 2.8rem;
 }
-.collectionpage .collection-hero__title::after{
-  content: '商品一覧';
+.collectionpage .collection-hero__description{
   font-size: 1.4rem;
   color: #969696;
   margin-left: 1.5rem;

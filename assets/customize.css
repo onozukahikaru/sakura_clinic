@@ -1174,11 +1174,14 @@ footer.footer .list-social__link{
 .collectionpage .collection-hero__title{
   display: flex;
   align-items: center;
-  font-size: 2.8rem;
+  font-size: 2.4rem;
 }
-.collectionpage .collection-hero__description{
+.collectionpage .collection-hero__description p{
   font-size: 1.4rem;
+}
+.collectionpage .collection-hero__title .subtitle{
   color: #969696;
+  font-size: 1.4rem;
   margin-left: 1.5rem;
 }
 .select .facet-filters__sort:focus-visible{
@@ -1247,7 +1250,7 @@ footer.footer .list-social__link{
     margin-bottom: 1.6rem;
   }
   .collectionpage .collection-hero__title{
-    font-size: 3.6rem;
+    font-size: 3rem;
   }
   .collectionpage .collection-hero__title::after{
     font-size: 1.6rem;
